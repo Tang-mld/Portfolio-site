@@ -1,0 +1,405 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ####################
+        ENTETE
+#####################*/ 
+
+// Navbar : 
+
+#tm-entete {
+
+    box-sizing: border-box;
+
+    .tm-navbar {
+    
+        display: flex;
+        justify-content: space-around;
+        background-color: #65ACBC;
+        color: white;
+        margin: auto;
+        font-weight: 800;
+        font-size: 1rem;
+
+        // A enlever quand j'aurais mon logo
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        // Décommenter quand j'aurais mon logo
+        .tm-logo {
+            // background-image: url("");
+            // background-size: cover;
+            // width: 30px;
+            // height: 30px;
+            position: absolute;
+            left: 40px;
+            top: 10px;
+        }
+
+        ul {
+            margin-bottom: 0;
+            height: 40px;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            li:first-child a {
+                background-image: url('../../public/img/logo-navbar/page-d\'accueil.png');
+                background-size: cover;
+                width: 1rem;
+                height: 1rem;
+                display: inline-block;
+                background-position: center;
+                vertical-align: sub;
+            }
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 40px;
+        }     
+        
+        .tm-toggle {
+            background-image: url("../../public/img/logo-navbar/burger-menu.png");
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            right: 40px;
+            top: 10px;
+            z-index: 1;
+        }
+    }
+}
+
+/* ####################
+       FIN ENTETE
+#####################*/ 
+
+
+/* ####################
+       MAQUETTES
+#####################*/ 
+
+#tm-projets {
+
+    background-color: #f7f7f7;
+    height: 700px;
+
+    h2 {
+        text-align: center;
+        margin: 0 0 70px 0;
+        padding-top: 70px;
+    }
+
+    .tm-container {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 5%;
+        max-width: 900px;
+        height: 400px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .tm-card1 {
+
+            width: 30%;
+            margin-right: 4.6%;
+            margin-bottom: 3rem;
+            vertical-align: baseline;
+            background-color: white;
+            border: 1px #BA4D54 solid;
+            box-shadow: 1px 1px 7px 1px rgb(92, 92, 92);
+
+            .tm-cardImg1 {
+
+                width: 90%;
+                cursor: pointer;
+                position: relative;
+                vertical-align: baseline;
+                display: inline-block;
+                padding: 20px 5% 0 5%;
+
+                img {
+
+                    margin-top: 15%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            h3 {
+
+                font-size: 1rem;
+                font-weight: 600;
+                padding-top: 0.6rem;
+                text-align: center;
+                
+                a {
+
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+    
+            p {
+    
+                font-style: italic;
+                font-size: .8rem;
+                line-height: 1.2rem;
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        .tm-card2 {
+
+            width: 30%;
+            margin-right: 4.6%;
+            margin-bottom: 3rem;
+            vertical-align: baseline;
+            background-color: white;
+            border: 1px #BA4D54 solid;
+            box-shadow: 1px 1px 7px 1px rgb(92, 92, 92);
+
+            .tm-cardImg2 {
+
+                width: 90%;
+                cursor: pointer;
+                position: relative;
+                vertical-align: baseline;
+                display: inline-block;
+                padding: 10px 5% 0 5%;
+
+                img {
+
+                    margin-top: 25%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            h3 {
+
+                font-size: 1rem;
+                font-weight: 600;
+                padding-top: 2rem;
+                text-align: center;
+
+                a {
+                    
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+    
+            p {
+    
+                font-style: italic;
+                font-size: .8rem;
+                line-height: 1.2rem;
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        .tm-card3 {
+
+            width: 30%;
+            margin-bottom: 3rem;
+            vertical-align: baseline;
+            background-color: white;
+            border: 1px #BA4D54 solid;
+            box-shadow: 1px 1px 7px 1px rgb(92, 92, 92);
+
+            .tm-cardImg3 {
+
+                width: 90%;
+                cursor: pointer;
+                position: relative;
+                vertical-align: baseline;
+                display: inline-block;
+                padding: 0px 5% 0 5%;
+
+                img {
+
+                    margin-top: 25%;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            h3 {
+
+                font-size: 1rem;
+                font-weight: 600;
+                padding-top: 0.6rem;
+                text-align: center;
+
+                a {
+                    
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+    
+            p {
+    
+                font-style: italic;
+                font-size: .8rem;
+                line-height: 1.2rem;
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+        }
+    } 
+}
+
+
+/* ####################
+    FIN MAQUETTES
+#####################*/
+
+/* ####################
+        FOOTER
+#####################*/
+
+#tm-footer {
+
+    background-color: #65ACBC;
+    color: white;
+    display: flex;
+    text-align: center;
+    height: 250px;
+    font-size: 1rem;
+
+    .tm-logo {
+
+        width: 33%;
+
+        // A enlever quand j'aurais mon logo
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        // Décommenter quand j'aurais mon logo
+        .tm-logo1 {
+            // background-image: url("../../public/img/logo-portfolio/affinity.png");
+            // background-size: cover;
+            // width: 30px;
+            // height: 30px;
+            display: inline-block;
+            margin-top: 25%;
+        }        
+    }
+
+    .tm-contact {
+
+        width: 33%;
+
+        p {
+            margin-top: 30px;
+        }
+
+        .tm-contact1 {
+
+            margin-top: 50px;
+
+            .tm-email {
+
+                border: 1px solid #BA4D54;
+                border-radius: 10px;
+                padding: 0.4rem;
+                text-decoration: none;
+                color: white;
+                background-color: #BA4D54;
+                margin-right: 30px;
+            }
+
+            .tm-numTel {
+
+                border: 1px solid #BA4D54;
+                border-radius: 10px;
+                padding: 0.4rem;
+                text-decoration: none;
+                color: white;
+                background-color: #BA4D54;
+            }
+        }
+
+        .tm-reglesSecu {
+
+            margin-top: 50px;
+        }
+    }
+
+    .tm-reseauxSociaux {
+
+        width: 33%;
+        margin-top: 50px;
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        .tm-fb1 {
+
+            background-image: url("../../public/img/logo-footer/logo-fb.png");
+            background-size: cover;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .tm-insta1 {
+
+            background-image: url("../../public/img/logo-footer/logo-insta.png");
+            background-size: cover;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .tm-git1 {
+
+            background-image: url("../../public/img/logo-footer/logo-github.png");
+            background-size: cover;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .tm-linkedin1 {
+
+            background-image: url("../../public/img/logo-footer/logo-linkedin.png");
+            background-size: cover;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+    }
+}
+
+
+/* ####################
+      FIN FOOTER
+#####################*/

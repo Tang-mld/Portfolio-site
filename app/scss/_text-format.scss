@@ -1,0 +1,1624 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ####################
+        ENTETE
+#####################*/ 
+
+// Navbar : 
+
+#tm-entete {
+
+    box-sizing: border-box;
+
+    .tm-navbar {
+    
+        display: flex;
+        justify-content: space-around;
+        background-color: #65ACBC;
+        color: white;
+        margin: auto;
+        font-weight: 800;
+        font-size: 1rem;
+
+        // A enlever quand j'aurais mon logo
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        // Décommenter quand j'aurais mon logo
+        .tm-logo {
+            // background-image: url("");
+            // background-size: cover;
+            // width: 30px;
+            // height: 30px;
+            position: absolute;
+            left: 40px;
+            top: 10px;
+        }
+
+        ul {
+            margin-bottom: 0;
+            height: 40px;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            li:first-child a {
+                background-image: url('../../public/img/logo-navbar/page-d\'accueil.png');
+                background-size: cover;
+                width: 0.8rem;
+                height: 0.8rem;
+                display: inline-block;
+                background-position: center;
+                vertical-align: sub;
+            }
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 40px;
+        }
+
+
+        .tm-toggle {
+            background-image: url("../../public/img/logo-navbar/burger-menu.png");
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            right: 40px;
+            top: 10px;
+            z-index: 1;
+        }  
+    }
+
+
+
+// Caroussel :
+
+    // Text animé du caroussel
+    #tm-table {
+        text-align: center;
+        display: table;
+        color: #BA4D54;
+        width: 60%;
+        height: 30%;
+        position: absolute;
+        top: 42%;
+        left: 20%;
+        z-index: 1;
+    }
+        
+    #tm-centeralign {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .tm-title-anime {
+        text-transform: uppercase;
+        letter-spacing: 1pt;
+        font-size: 30pt;
+        margin-bottom: 15px;
+    }
+    // Fin du text animé
+
+
+    // Caroussel 
+    .tm-caroussel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #65ACBC;
+    }
+
+    // Je masque le surplus de la 2ème image qui empiétais sur la 1ère lors du zoom
+    .tm-carousel-screen {
+        overflow: hidden;
+    }
+    
+    /*Pour marcher le caroussel ne doit pas être à 100% de largeur*/
+    .tm-carousel-container {
+        max-width: auto;
+        width: 85%;
+    }
+    
+    /*C'est le vériatble caroussel qui est caché*/
+    .tm-carousel {
+        position: relative;
+        width: 100%;
+        /*La largeur de l'image est de 980px et sa hauteur est de 570px.*/
+        padding-top: calc(570 / 980 * 100%);
+        overflow: hidden;
+    }
+
+    // Effet zoom 1ère image
+    .tm-full1 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+    }
+
+    .tm-zoom1 {
+        animation: scale 40s linear infinite;
+    }
+
+    @keyframes scale {
+        50% {
+          -webkit-transform:scale(1.2);
+          -moz-transform:scale(1.2);
+          -ms-transform:scale(1.2);
+          -o-transform:scale(1.2);
+          transform:scale(1.2);
+        }
+    }
+    // Fin du zoom de la 1ère image
+
+
+    // Effet zoom 2ème image
+    .tm-full2 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+    }
+
+    .tm-zoom2 {
+        animation: scale 40s linear infinite;
+    }
+
+    @keyframes scale {
+        50% {
+          -webkit-transform:scale(1.2);
+          -moz-transform:scale(1.2);
+          -ms-transform:scale(1.2);
+          -o-transform:scale(1.2);
+          transform:scale(1.2);
+        }
+    }
+    // Fin du zoom de la 2ème image
+
+
+    .tm-carousel-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .tm-left-arrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 147px;
+        cursor: pointer;
+    }
+    
+    .tm-left-arrow:hover {
+        background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    }
+    
+    .tm-left-arrow:hover .chevron,
+    .tm-right-arrow:hover .chevron {
+        border-color: #e6e6e6;
+    }
+    
+    .tm-right-arrow {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 147px;
+        cursor: pointer;
+    }
+    
+    .tm-right-arrow:hover {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    }
+    
+    .tm-chevron {
+        width: 25px;
+        height: 25px;
+        border: solid rgba(255, 255, 255, 0.5);
+        border-width: 10px 10px 0 0;
+    }
+    
+    .tm-chevron.right {
+        transform: rotate(45deg);
+    }
+    
+    .tm-chevron.left {
+        transform: rotate(-135deg);
+    }
+    
+    .tm-circle-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45px;
+    }
+    
+    .tm-circle {
+        border: 1px solid white;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    
+    .circle-fill {
+        background-color: white;
+    }
+    
+    .tm-carousel-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Animations :*/
+    @keyframes toRight {
+        0% {
+        left: 0;
+        }
+        100% {
+        left: 100%;
+        }
+    }
+    
+    @keyframes toLeft {
+        0% {
+        left: 0;
+        }
+        100% {
+        left: -100%;
+        }
+    }
+    
+    @keyframes comeRight {
+        0% {
+        left: 100%;
+        }
+        100% {
+        left: 0;
+        }
+    }
+    
+    @keyframes comeLeft {
+        0% {
+        left: -100%;
+        }
+        100% {
+        left: 0;
+        }
+    }
+}
+
+/* ####################
+       FIN ENTETE
+#####################*/ 
+
+
+
+/* ####################
+       TOGGLE NAV
+#####################*/ 
+
+#tm-toggleNav {
+
+    display: none;
+    
+
+    .tm-toggleNav-container {
+        position: fixed;
+        right: 0%;
+        top: 7.4%;
+        z-index: 1;
+        opacity: 80%;
+
+        display: flex;
+        width: 15%;
+        margin: auto;
+        flex-direction: column;
+        text-align: center;
+        font-weight: bold;
+        background-color: #65ACBC;
+        color: white;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .tm-toggleNav1 {
+            border: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav2 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav3 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav4 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav5 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav6 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav7 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+    }
+}
+
+
+/* ####################
+    FIN TOOGLE NAV
+#####################*/ 
+
+
+/* ####################
+     PRESENTATION
+#####################*/ 
+
+#tm-presentation {
+
+    background-color: #65ACBC;
+    color: white;
+
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .tm-text {
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: #BA4D54;
+            font-weight: bold;
+        }
+    }
+
+    .tm-logiciels {
+
+        display: flex;
+        height: 100px;
+
+        .tm-macOS {
+            background-image: url("../../public/img/logo-portfolio/mac.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 80px;
+            top: 900px;
+            transform: rotate(-15deg);
+        }
+
+        .tm-insta {
+            background-image: url("../../public/img/logo-portfolio/insta.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 300px;
+            top: 1020px;
+        }
+
+        .tm-facebook {
+            background-image: url("../../public/img/logo-portfolio/facebook.png");
+            background-size: cover;
+            width:50px;
+            height: 40px;
+            position: absolute;
+            left: 170px;
+            top: 1150px;
+            transform: rotate(-25deg);
+        }
+
+        .tm-internet {
+            background-image: url("../../public/img/logo-portfolio/website.png");
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 80px;
+            top: 1320px;
+            transform: rotate(20deg);
+        }
+
+        .tm-linkedin {
+            background-image: url("../../public/img/logo-portfolio/linkedin.png");
+            background-size: cover;
+            width: 42px;
+            height: 40px;
+            position: absolute;
+            right: 320px;
+            top: 900px;
+            transform: rotate(-15deg);
+        }
+
+        .tm-github {
+            background-image: url("../../public/img/logo-portfolio/github.png");
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 100px;
+            top: 1020px;
+            transform: rotate(25deg);
+        }
+
+        .tm-affinity {
+            background-image: url("../../public/img/logo-portfolio/affinity.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 230px;
+            top: 1150px;
+        }
+
+        .tm-windows {
+            background-image: url("../../public/img/logo-portfolio/windows10.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 80px;
+            top: 1320px;
+            transform: rotate(30deg);
+        }
+    }
+
+    // Bordure gauche triangle de tm-title
+
+    .border-triangle-left {
+        width: 1px;
+        height: 471px;
+        background: #BA4D54;
+        transform: rotate(58deg);
+        position: absolute;
+        z-index: 1;
+        left: 357px;
+        top: 1114px;
+    }
+
+    // Bordure droite triangle de tm-title1
+
+    .border-triangle-right {
+        width: 1px;
+        height: 470px;
+        background: #BA4D54;
+        transform: rotate(-58deg);
+        position: absolute;
+        z-index: 1;
+        left: 1161px;
+        top: 1115px;
+    }
+
+    // Bordure top de tm-title
+
+    .border-tm-title1 {
+        width: 1px;
+        height: 405px;
+        background: #BA4D54;
+        transform: rotate(90deg);
+        position: absolute;
+        z-index: 1;
+        left: 758px;
+        top: 1023px;
+    }
+
+    // Bordure bottom left de tm-title1 
+
+    .border-bottom-left-tm-title1 {
+        width: 1px;
+        height: 159px;
+        background: #BA4D54;
+        transform: rotate(90deg);
+        position: absolute;
+        z-index: 1;
+        left: 78px;
+        top: 2026px;
+    }
+
+
+    // Bordure bottom right de tm-title1 
+
+    .border-bottom-right-tm-title1 {
+        width: 1px;
+        height: 159px;
+        background: #BA4D54;
+        transform: rotate(90deg);
+        position: absolute;
+        z-index: 1;
+        right: 78px;
+        top: 2026px;
+    }
+
+    #tm-title1 {
+        
+        background-color: white;
+        display: flex;
+        margin: auto;
+        width: 1202px;
+        position: relative;
+
+        .triangle-left {
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-top-width: 0px;
+            border-bottom-width: 250px;
+            border-left: 400px solid #65ACBC;
+        }
+
+        .tm-ovale {
+            border-top: solid #BA4D54 1px;
+            width: 220px;
+            height: 100px;
+            background: #BA4D54;
+            border-top-left-radius: 200px 100px;
+            border-top-right-radius: 200px 100px;
+            border-bottom-right-radius: 200px 100px;
+            border-bottom-left-radius: 200px 100px;
+            margin-top: 120px;
+            margin-left: 91px;
+            margin-right: 91px;
+
+            h2 {
+                width: 150px;
+                padding: 35px;
+                margin: auto;
+            }
+        }
+
+        .triangle-right {
+            width: 0;
+            height: 0;
+            border: 0 solid transparent;
+            border-top-width: 0px;
+            border-bottom-width: 250px;
+            border-right: 400px solid #65ACBC;
+        }
+    }
+
+    .tm-projets {
+
+        display: flex;
+        margin: auto;
+        width: 1202px;
+        height: 630px;
+        background-color: white;
+        border-left: solid #BA4D54 1px;
+        border-right: solid #BA4D54 1px;
+
+        .tm-maquettage {
+            width: 390px;
+            height: 700px;
+            margin-top: 100px;
+            margin-right: 15px;
+
+            .tm-img1 {
+                background-image: url("../../public/img/images-portfolio/maquettage.jpg");
+                width: 390px;
+                height: 200px;
+                background-size: cover;
+                display: inline-block;
+                border: solid #BA4D54 1px;
+            }
+
+            .tm-maquettagePage {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        .tm-bc {
+            width: 390px;
+            height: 700px;
+            margin-top: 100px;
+            margin-right: 15px;
+
+            .tm-img2 {
+                background-image: url("../../public/img/images-portfolio/business-case.jpg");
+                width: 390px;
+                height: 200px;
+                background-size: cover;
+                display: inline-block;
+                border: solid #BA4D54 1px;
+            }
+        }
+
+        .tm-projetsPerso {
+            width: 390px;
+            height: 700px;
+            margin-top: 100px;
+
+            .tm-img3 {
+                background-image: url("../../public/img/images-portfolio/projets-perso.jpg");
+                width: 390px;
+                height: 200px;
+                background-size: cover;
+                display: inline-block;
+                border: solid #BA4D54 1px;
+            }
+
+            .tm-projetsPersoPage {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        button {
+            display: block;
+            background-color: #BA4D54;
+            color: white;
+            width: 220px;
+            height: 50px;
+            margin: auto;
+            margin-top: 150px;
+        } 
+
+        .tm-line1 {
+            width: 22%;
+            height: 170px;
+            border: solid 1px black;
+            border-radius: 0 100px 95%/200px 0;
+            border-color: transparent transparent #BA4D54 transparent;
+            position: absolute;
+            top: 1225px;
+            right: 319px;
+        }
+
+        .tm-line2 {
+            width: 22%;
+            height: 170px;
+            border: solid 1px black;
+            border-radius: 0 100px 95%/200px 0;
+            border-color: transparent transparent #BA4D54 transparent;
+            position: absolute;
+            top: 1225px;
+            left: 317px;
+            transform: rotate(90deg);
+            transform: scaleX(-1);
+        }
+
+        .tm-bytmoji {
+            background-image: url("../../public/img/bytmoji/bytmoji.png");
+                width: 150px;
+                height: 250px;
+                background-size: cover;
+                display: inline-block;
+                position: absolute;
+                left: 0%;
+                top: 252%;
+        }
+    }
+}
+/* ####################
+    FIN PRESENTATION
+#####################*/ 
+
+
+/* ####################
+      IMGSCROLL
+#####################*/
+
+#tm-imgScroll {
+
+    height: 600px;
+    width: 100%;
+
+    .tm-imgS {
+
+        background-image: url('../../public/img/image-scroll/image-scroll.jpg');
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: inherit;
+        height: 500px;
+        background-attachment: fixed;
+    }
+}
+
+
+/* ####################
+    FIN IMGSCROLL
+#####################*/
+
+/* ####################
+     COMPETENCES
+#####################*/
+
+#tm-competences {
+
+    height: 700px;
+    position: relative;
+
+    h2 {
+        text-align: center;
+        margin-top: 70px;
+        // margin-bottom: 50px;
+    }
+
+    .tm-progressBar {
+
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        // Hauteur des progresseBarres
+        height: 82vh;
+
+        .tm-left {
+
+            width: 50%;
+            border-right: solid #BA4D54 1px;
+            
+
+        // Images des logiciels de 1 à 4
+
+            .tm-img1 {
+                background-image: url("../../public/img/logo-portfolio/html.png");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                left: 130px;
+                top: 155px;
+            }
+
+            .tm-img2 {
+                background-image: url("../../public/img/logo-portfolio/css.png");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                left: 130px;
+                top: 265px;
+            }
+
+            .tm-img3 {
+                background-image: url("../../public/img/logo-portfolio/php.png");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 50px;
+                width: 100px;
+                position: absolute;
+                left: 110px;
+                top: 380px;
+            }
+
+            .tm-img4 {
+                background-image: url("../../public/img/logo-portfolio/angular.png");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                left: 130px;
+                top: 490px;
+            }
+
+
+        // ProgressBar 1
+
+            .tm-progress1 {
+                height: 30px;
+                width: 300px;
+                background-color: lightgray;
+                border-radius: 20px;
+                margin-bottom: 80px;
+                margin-left: 260px;
+                margin-top: 70px;
+            }
+            
+            .tm-progress-done1 {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                background: linear-gradient(to left, #f2709c,#ff9472);
+                color: #fff;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                transition: 1s ease;
+            }
+
+
+        // ProgressBar 2
+        
+            .tm-progress2 {
+                height: 30px;
+                width: 300px;
+                background-color: lightgray;
+                border-radius: 20px;
+                margin-bottom: 80px;
+                margin-left: 260px;
+            }
+            
+            .tm-progress-done2 {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                background: linear-gradient(to left, #f2709c,#ff9472);
+                color: #fff;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                transition: 1s ease;
+            }
+
+
+        // ProgressBar 3
+                
+            .tm-progress3 {
+                height: 30px;
+                width: 300px;
+                background-color: lightgray;
+                border-radius: 20px;
+                margin-bottom: 80px;
+                margin-left: 260px;
+            }
+
+            .tm-progress-done3 {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                background: linear-gradient(to left, #f2709c,#ff9472);
+                color: #fff;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                transition: 1s ease;
+            }
+
+
+        // ProgressBar 4
+        
+            .tm-progress4 {
+                height: 30px;
+                width: 300px;
+                background-color: lightgray;
+                border-radius: 20px;
+                margin-bottom: 80px;
+                margin-left: 260px;;
+            }
+            
+            .tm-progress-done4 {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                background: linear-gradient(to left, #f2709c,#ff9472);
+                color: #fff;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                transition: 1s ease;
+            }
+        }
+
+
+        .tm-right {
+
+            width: 50%;
+
+        // Images des logiciels de 5 à 8
+
+            .tm-img5 {
+                background-image: url("../../public/img/logo-portfolio/javascript.png");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                right: 580px;
+                top: 155px;
+            }
+
+            .tm-img6 {
+                background-image: url("../../public/img/logo-portfolio/wordpress.png");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                right: 580px;
+                top: 270px;
+            }
+
+            .tm-img7 {
+                background-image: url("../../public/img/logo-portfolio/Symfony.png");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                right: 580px;
+                top: 380px;
+            }
+
+            .tm-img8 {
+                background-image: url("../../public/img/logo-portfolio/bdd.png");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                right: 580px;
+                top: 490px;
+            }
+
+
+        // ProgressBar 5
+        
+            .tm-progress5 {
+                height: 30px;
+                width: 300px;
+                background-color: lightgray;
+                border-radius: 20px;
+                margin-bottom: 80px;
+                margin-left: 260px;
+                margin-top: 70px;
+            }
+            
+            .tm-progress-done5 {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                background: linear-gradient(to left, #f2709c,#ff9472);
+                color: #fff;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                transition: 1s ease;
+            }
+
+
+        // ProgressBar 6
+        
+            .tm-progress6 {
+                height: 30px;
+                width: 300px;
+                background-color: lightgray;
+                border-radius: 20px;
+                margin-bottom: 80px;
+                margin-left: 260px;;
+            }
+            
+            .tm-progress-done6 {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                background: linear-gradient(to left, #f2709c,#ff9472);
+                color: #fff;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                transition: 1s ease;
+            }
+
+
+        // ProgressBar 7
+        
+            .tm-progress7 {
+                height: 30px;
+                width: 300px;
+                background-color: lightgray;
+                border-radius: 20px;
+                margin-bottom: 80px;
+                margin-left: 260px;
+            }
+            
+            .tm-progress-done7 {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                background: linear-gradient(to left, #f2709c,#ff9472);
+                color: #fff;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                transition: 1s ease;
+            }
+
+
+        // ProgressBar 8
+        
+            .tm-progress8 {
+                height: 30px;
+                width: 300px;
+                background-color: lightgray;
+                border-radius: 20px;
+                margin-bottom: 80px;
+                margin-left: 260px;
+            }
+            
+            .tm-progress-done8 {
+                height: 100%;
+                width: 0;
+                opacity: 0;
+                background: linear-gradient(to left, #f2709c,#ff9472);
+                color: #fff;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                transition: 1s ease;
+            }
+        }
+    }
+}
+
+/* ####################
+    FIN COMPETENCES
+#####################*/
+
+
+/* ####################
+      ACTIVITES
+#####################*/
+
+#tm-activites {
+
+    background-color: #65ACBC;
+    color: white;
+    height: 580px;
+
+
+    h2 {
+        text-align: center;
+        padding-top: 70px;
+        margin-bottom: 80px;
+    }
+
+    .tm-act {
+
+        display: flex;
+
+        h3 {
+            margin-top: 50px;
+        }
+        .tm-cat1 {
+
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+
+            .tm-integration {
+                background-image: url("../../public/img/images-portfolio/integration-web.jpg");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 220px;
+                width: 220px;
+                border: solid #BA4D54 1px;;
+                border-radius: 100%;
+            }
+
+            .tm-integration:hover {
+                filter: brightness(50%);
+                -webkit-filter: brightness(50%);
+            }
+        }
+
+        .tm-cat2 {
+
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+
+            .tm-conception {
+                background-image: url("../../public/img/images-portfolio/conception-graphique.jpg");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 220px;
+                width: 220px;
+                border: solid #BA4D54 1px;;
+                border-radius: 100%;
+            }
+
+            .tm-conception:hover {
+                filter: brightness(50%);
+                -webkit-filter: brightness(50%);
+            }
+        }
+
+        .tm-cat3 {
+
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+
+            .tm-referencement {
+                background-image: url("../../public/img/images-portfolio/referencement-web.jpg");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 220px;
+                width: 220px;
+                border: solid #BA4D54 1px;;
+                border-radius: 100%;
+            }
+
+            .tm-referencement:hover {
+                filter: brightness(50%);
+                -webkit-filter: brightness(50%);
+            }
+        }
+
+        .tm-cat4 {
+
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+
+            .tm-projetsWeb {
+                background-image: url("../../public/img/images-portfolio/projet-web.jpg");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 220px;
+                width: 220px;
+                border: solid #BA4D54 1px;;
+                border-radius: 100%;
+            }
+
+            .tm-projetsWeb:hover {
+                filter: brightness(50%);
+                -webkit-filter: brightness(50%);
+            }
+        }
+    }
+}
+
+
+/* ####################
+    FIN ACTIVITES
+#####################*/
+
+
+/* ####################
+      FORMULAIRE
+#####################*/
+
+#tm-formulaire {
+
+    position: relative;
+
+    .tm-title1 {
+
+        display: flex;
+        flex-direction: column;
+        background-color: #65ACBC;
+
+        h2 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+            width: 900px;
+            height: 100px;
+            margin: auto;
+            background-color: white;
+            border-radius: 20px 20px 0 0;
+        }
+    
+        h3 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 900px;
+            height: 100px;
+            margin: auto;
+            background-color: white; 
+
+            a {
+                text-decoration: none;
+                padding: 0;
+                color: #BA4D54;
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    .tm-avion {
+        background-image: url('../../public/img/images-portfolio/avion-jaune.png');
+        background-size: cover;
+        display: inline-block;
+        background-position: center;
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        left: 1065px;
+        top: 660px;
+    }
+
+    .tm-form {
+
+        background-image: url('../../public/img/images-portfolio/formulaire.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 720px;
+        position: relative;
+
+        .tm-form1 {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            flex-direction: row;
+            padding-top: 60px;
+            position: absolute;
+            left: 10%;
+        }
+
+        .tm-form2 {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            flex-direction: row;
+            padding-top: 60px;
+            position: absolute;
+            right: 10%;
+        }
+
+        .tm-form3 {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            padding-top: 60px;
+            position: absolute;
+            top: 80px;
+            left: 10%;
+        }
+
+        .tm-form4 {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            padding-top: 60px;
+            position: absolute;
+            right: 10%;
+            top: 80px;
+        }
+
+        .tm-form5 {
+            display: flex;
+            width: 40%;
+            margin: auto;
+            padding-top: 60px;
+            justify-content: center;
+            padding-top: 230px;
+        }
+
+        #url {
+            text-align: center;
+        }
+
+        .tm-form6 {
+            display: flex;
+            width: 40%;
+            margin: auto;
+            padding-top: 60px;
+            justify-content: center;
+            padding-top: 60px;
+        }
+
+        #objet {
+            text-align: center;
+        }
+
+        .tm-form7 {
+            display: flex;
+            width: 80%;
+            height: 150px;
+            margin: auto;
+            padding-top: 60px;
+            justify-content: center;
+
+            textarea {
+                width: 50%;
+                height: 100%;
+                text-align: center;
+            }
+        }
+
+        .tm-form8 {
+            display: flex;
+            width: 30%;
+            margin: auto;
+            padding-top: 80px;
+            justify-content: center;
+        }
+
+        input[type=submit] {
+            background-color: #BA4D54;
+            color: white;
+        }
+
+        .form_col {
+            display: inline-block;
+            padding: 3px 0px;
+            min-height: 1px;
+            text-align: right;
+        }
+            
+        input {
+            width: 40%;
+            padding: 2px;
+            border: 1px solid #BA4D54;
+            border-radius: 2px;
+            outline: none; /* Retire les bordures appliquées par certains navigateurs (Chrome notamment) lors du focus des éléments <input> */
+        }
+            
+        input:focus {
+            border-color: rgba(82, 168, 236, 0.75);
+            box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+        }
+
+        textarea:focus {
+            border-color: rgba(82, 168, 236, 0.75);
+            box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+        }
+            
+        .correct {
+            border-color: rgba(68, 191, 68, 0.75);
+        }
+            
+        .correct:focus {
+            border-color: rgba(68, 191, 68, 0.75);
+            box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+        }
+            
+        .incorrect {
+            border-color: rgba(191, 68, 68, 0.75);
+        }
+            
+        .incorrect:focus {
+            border-color: rgba(191, 68, 68, 0.75);
+            box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+        }
+            
+        .tooltip {
+            display: inline-block;
+            margin-left: 20px;
+            padding: 2px 4px;
+            border: 1px solid #555;
+            background-color: #CCC;
+            border-radius: 4px;
+        }
+    }
+}
+
+
+/* ####################
+    FIN FORMULAIRE
+#####################*/
+
+
+
+/* ####################
+        FOOTER
+#####################*/
+
+#tm-footer {
+
+    background-color: #65ACBC;
+    color: white;
+    display: flex;
+    text-align: center;
+    height: 250px;
+    font-size: 1rem;
+
+    .tm-logo {
+
+        width: 33%;
+
+        // A enlever quand j'aurais mon logo
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        // décommenter quand j'aurais mon logo
+        .tm-logo1 {
+            // background-image: url(".");
+            // background-size: cover;
+            // width: 30px;
+            // height: 30px;
+            display: inline-block;
+            margin-top: 25%;
+        }        
+    }
+
+    .tm-contact {
+
+        width: 33%;
+
+        p {
+            margin-top: 30px;
+        }
+
+        .tm-contact1 {
+
+            margin-top: 50px;
+
+            .tm-email {
+
+                border: 1px solid #BA4D54;
+                border-radius: 10px;
+                padding: 0.4rem;
+                text-decoration: none;
+                color: white;
+                background-color: #BA4D54;
+                margin-right: 30px;
+            }
+
+            .tm-numTel {
+
+                border: 1px solid #BA4D54;
+                border-radius: 10px;
+                padding: 0.4rem;
+                text-decoration: none;
+                color: white;
+                background-color: #BA4D54;
+            }
+        }
+
+        .tm-reglesSecu {
+
+            margin-top: 50px;
+        }
+    }
+
+    .tm-reseauxSociaux {
+
+        width: 33%;
+        margin-top: 50px;
+
+        p {
+            margin-bottom: 30px;
+        }
+
+        .tm-fb1 {
+
+            background-image: url("../../public/img/logo-footer/logo-fb.png");
+            background-size: cover;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .tm-insta1 {
+
+            background-image: url("../../public/img/logo-footer/logo-insta.png");
+            background-size: cover;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .tm-git1 {
+
+            background-image: url("../../public/img/logo-footer/logo-github.png");
+            background-size: cover;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .tm-linkedin1 {
+
+            background-image: url("../../public/img/logo-footer/logo-linkedin.png");
+            background-size: cover;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+    }
+}
+
+
+/* ####################
+      FIN FOOTER
+#####################*/

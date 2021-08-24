@@ -1,0 +1,21 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "Portfolio de Moulard Tanguy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Portfolio",
+    "activité",
+    "compétences",
+    "projets",
+    "logiciels"
+  ],
+  "author": "Moulard Tanguy",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
