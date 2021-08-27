@@ -1,11 +1,3 @@
-
-
-// document.onscroll = function() {
-//   ScrollFunctionHTML()
-
-// };
-
-
 /* ####################
     PROGRESSBAR
 #####################*/ 
@@ -20,65 +12,10 @@ setTimeout(() => {
 
 
 
+// Utiliser la librairie gsap pour faire les unscroll
 
+// Déclancher un élement au scroll sur un element html(tm-compétences)
 
-
-
-// Essai :
-
-// function ScrollFunctionHTML() {
-//   if ($(document).scrollTop() > 6950){
-//     let anglais = document.querySelector('.tm-progress-done1');
-//     anglais.className = "anglais barre";
-//   }
-// }
-
-// Voir pourquoi le on-scroll ne fonctionne pas !
-
-// // Fonction qui lance le onscroll à 370px de hauteur
-// function ScrollFunctionHTML() {
-//   if ($(document).scrollTop() > 0){
-//     document.getElementsByClassName('tm-progress-done1');
-//     // On renseigne le max du % du logiciel
-//     let maxHtml = 80;
-//     $('.tm-progress-done1').attr('data-progress', maxHtml);
-//   }
-    // setTimeout(window.html, 200);
-   // $('.tm-progress1').click(window.html);
-// }
-
-// function ScrollFunctionHTML() {
-//   if ($(document).scrollTop() > 8950){
-//     let html = document.querySelector('.tm-left');
-//     html.className = "tm-progress1";
-//   }
-// }
-
-
-// // ProgressBar 1
-// function ScrollFunctionHTML() {
-//   if ($(document).scrollTop() > 2950){
-// const progress1 = document.querySelector('.tm-progress-done1');
-
-// setTimeout(() => {
-  
-//   progress1.style.opacity = 1;
-//   progress1.style.width = progress1.getAttribute('data-done') + '%';
-// }, 500)
-  
-// }
-
-// }
-
-// document.onscroll = function ScrollFunctionHTML{
-// const progress1 = document.querySelector('.tm-progress-done1');
-
-// setTimeout(() => {
-//   progress1.style.opacity = 1;
-//   progress1.style.width = progress1.getAttribute('data-done') + '%';
-// }, 500)
-
-// }
 
 
 

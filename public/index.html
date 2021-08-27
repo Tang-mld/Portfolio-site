@@ -107,6 +107,8 @@
             <div class="triangle-left"></div>
             <div class="tm-ovale"><h2>Projets</h2></div>
             <div class="triangle-right"></div>
+            <div class="tm-line1"></div>
+            <div class="tm-line2"></div>
         </div>
 
         <div class="tm-projets">
@@ -123,8 +125,6 @@
                 <a class="tm-img3" href="../public/projetsPerso.html"></a>
                 <button><a class="tm-projetsPersoPage" href="../public/projetsPerso.html">Projets personnels</a></button>
             </div>
-            <div class="tm-line1"></div>
-            <div class="tm-line2"></div>
         </div>
     </section>
 
@@ -138,16 +138,20 @@
         <h2>Compétences</h2>
         <div class="tm-progressBar">
             <div class="tm-left">
-                <a class="tm-img1" href="#"></a>
-                <div class="tm-progress1">
-                    <div class="tm-progress-done1" data-done="90">
-                    90% 
+                <div class="tm-container-progress1">
+                    <a class="tm-img1" href="#"></a>
+                    <div class="tm-progress1">
+                        <div class="tm-progress-done1" data-done="90">
+                        90% 
+                        </div>
                     </div>
                 </div>
-                <a class="tm-img2" href="#"></a>
-                <div class="tm-progress2">
-                    <div class="tm-progress-done2" data-done="85">
-                    85%
+                <div >
+                    <a class="tm-img2" href="#"></a>
+                    <div class="tm-progress2">
+                        <div class="tm-progress-done2" data-done="85">
+                        85%
+                        </div>
                     </div>
                 </div>
                 <a class="tm-img3" href="#"></a>
@@ -221,8 +225,8 @@
             <h3><a href="mailto:tangue-42@hotmail.fr">tangue-42@hotmail.fr</a></h3>
         </div>
         
-        <div class="tm-form">
-            <form method="post" action="#">
+        <div>
+            <form class="tm-form" method="post" action="#">
                 <div class="tm-form1">
                     <label class="form_col" for="nom" ></label>
                     <input required type="text" name="nom" id="nom"   placeholder="Nom">
@@ -256,7 +260,6 @@
                 <div class="tm-form7">
                     <label class="form_col" for="projet"></label>
                     <textarea class="tm-textArea" name="projet" id="projet" placeholder="Projet en détail"></textarea>
-                    <span class="tooltip">L'objet doit être compris entre 10 et 300 caractères</span>
                 </div>
                 <div class="tm-form8">
                     <input type="submit" value="Envoyer">

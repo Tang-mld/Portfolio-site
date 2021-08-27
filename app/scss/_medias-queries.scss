@@ -1,0 +1,40 @@
+/* ####################
+    MEDIAS-QUERIES
+#####################*/ 
+
+
+
+@media screen and (max-width: 1204px) {
+
+  #tm-title1 {
+    
+    width: 902px;
+
+      .triangle-left {
+        border-left: 200px solid #65ACBC;
+        transform: translate(0% 0%);
+      }
+
+      .tm-ovale {
+        width: 120px;
+        height: 50px;
+        transform: translate(0% 0%);
+      }
+
+      .triangle-right {
+        border-right: 200px solid #65ACBC;
+        transform: translate(0% 0%);
+      }
+  }
+}
+
+
+
+
+
+
+
+
+/* ####################
+  FIN MEDIAS-QUERIES
+#####################*/
