@@ -1,9 +1,16 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 
 /* ####################
@@ -24,42 +31,39 @@ body {
         color: white;
         margin: auto;
         font-weight: 800;
-        font-size: 1rem;
 
-        // A enlever quand j'aurais mon logo
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        // Décommenter quand j'aurais mon logo
         .tm-logo {
-            // background-image: url("");
-            // background-size: cover;
-            // width: 30px;
-            // height: 30px;
+            background-image: url("../../public/img/logo-navbar/Logo\ TMD\ finit.svg");
+            background-size: cover;
+            background-position: center;
+            width: 100px;
+            height: 80px;
             position: absolute;
-            left: 40px;
+            left: -20px;
             top: 10px;
+            transform: translate(25px, -10%);
+            z-index: 2;
         }
 
         ul {
             margin-bottom: 0;
             height: 40px;
+            font-size: 1.1rem;
 
             a {
                 color: white;
                 text-decoration: none;
             }
 
-            li:first-child a {
+            .tm-home {
                 background-image: url('../../public/img/logo-navbar/page-d\'accueil.png');
                 background-size: cover;
-                width: 0.8%;
-                height: 0.8%;
+                width: 1.2rem;
+                height: 1.2rem;
                 display: inline-block;
                 background-position: center;
                 vertical-align: sub;
+                margin-right: 8px;
             }
         }
 
@@ -131,8 +135,62 @@ body {
     
     /*Pour marcher le caroussel ne doit pas être à 100% de largeur*/
     .tm-carousel-container {
+
         max-width: auto;
         width: 85%;
+        position: relative;
+
+        .tm-left-arrow {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 147px;
+            cursor: pointer;
+        }
+        
+        .tm-left-arrow:hover {
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+        }
+        
+        .tm-left-arrow:hover .chevron,
+        .tm-right-arrow:hover .chevron {
+            border-color: #e6e6e6;
+        }
+        
+        .tm-right-arrow {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 147px;
+            cursor: pointer;
+        }
+        
+        .tm-right-arrow:hover {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+        }
+        
+        .tm-chevron {
+            width: 25px;
+            height: 25px;
+            border: solid rgba(255, 255, 255, 0.5);
+            border-width: 10px 10px 0 0;
+        }
+        
+        .tm-chevron.right {
+            transform: rotate(45deg);
+        }
+        
+        .tm-chevron.left {
+            transform: rotate(-135deg);
+        }
     }
     
     /*C'est le vériatble caroussel qui est caché*/
@@ -208,58 +266,6 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-    }
-    
-    .tm-left-arrow {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 147px;
-        cursor: pointer;
-    }
-    
-    .tm-left-arrow:hover {
-        background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-    }
-    
-    .tm-left-arrow:hover .chevron,
-    .tm-right-arrow:hover .chevron {
-        border-color: #e6e6e6;
-    }
-    
-    .tm-right-arrow {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        right: 0;
-        height: 100%;
-        width: 147px;
-        cursor: pointer;
-    }
-    
-    .tm-right-arrow:hover {
-        background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
-    }
-    
-    .tm-chevron {
-        width: 25px;
-        height: 25px;
-        border: solid rgba(255, 255, 255, 0.5);
-        border-width: 10px 10px 0 0;
-    }
-    
-    .tm-chevron.right {
-        transform: rotate(45deg);
-    }
-    
-    .tm-chevron.left {
-        transform: rotate(-135deg);
     }
     
     .tm-circle-container {
@@ -342,11 +348,14 @@ body {
        TOGGLE NAV
 #####################*/ 
 
+.tm-toggle {
+    margin-top: 7px;
+}
+
 #tm-toggleNav {
 
     display: none;
     
-
     .tm-toggleNav-container {
         position: fixed;
         right: 0px;
@@ -446,6 +455,7 @@ body {
 
         display: flex;
         height: 100px;
+        position: relative;
 
         // Mettre le parent en relatif pour positionner 
 
@@ -455,8 +465,8 @@ body {
             width: 40px;
             height: 40px;
             position: absolute;
-            left: 80px;
-            top: 900px;
+            left: 5%;
+            top: -240px;
             transform: rotate(-15deg);
         }
 
@@ -466,8 +476,13 @@ body {
             width: 40px;
             height: 40px;
             position: absolute;
-            left: 300px;
-            top: 1020px;
+            left: 20%;
+            top: -110px;
+        }
+
+        a.tm-insta:hover {
+            transform: scale(1.5);
+            transition: 0.3s;
         }
 
         .tm-facebook {
@@ -476,20 +491,14 @@ body {
             width:50px;
             height: 40px;
             position: absolute;
-            left: 170px;
-            top: 1150px;
+            left: 11%;
+            top: 40px;
             transform: rotate(-25deg);
         }
 
-        .tm-internet {
-            background-image: url("../../public/img/logo-portfolio/website.png");
-            background-size: cover;
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            left: 80px;
-            top: 1320px;
-            transform: rotate(20deg);
+        a.tm-facebook:hover {
+            transform: scale(1.5);
+            transition: 0.3s;
         }
 
         .tm-linkedin {
@@ -498,9 +507,14 @@ body {
             width: 42px;
             height: 40px;
             position: absolute;
-            right: 320px;
-            top: 900px;
+            right: 22%;
+            top: -240px;
             transform: rotate(-15deg);
+        }
+
+        a.tm-linkedin:hover {
+            transform: scale(1.5);
+            transition: 0.3s;
         }
 
         .tm-github {
@@ -509,9 +523,14 @@ body {
             width: 50px;
             height: 50px;
             position: absolute;
-            right: 100px;
-            top: 1020px;
+            right: 5%;
+            top: -110px;
             transform: rotate(25deg);
+        }
+
+        a.tm-github:hover {
+            transform: scale(1.5);
+            transition: 0.3s;
         }
 
         .tm-affinity {
@@ -520,86 +539,9 @@ body {
             width: 40px;
             height: 40px;
             position: absolute;
-            right: 230px;
-            top: 1150px;
+            right: 16%;
+            top: 40px;
         }
-
-        .tm-windows {
-            background-image: url("../../public/img/logo-portfolio/windows10.png");
-            background-size: cover;
-            width: 40px;
-            height: 40px;
-            position: absolute;
-            right: 80px;
-            top: 1320px;
-            transform: rotate(30deg);
-        }
-    }
-
-    // Bordure gauche triangle de tm-title
-
-    .border-triangle-left {
-        width: 1px;
-        height: 471px;
-        background: #BA4D54;
-        transform: rotate(58deg);
-        position: absolute;
-        z-index: 1;
-        left: 357px;
-        top: 1114px;
-    }
-
-    // Bordure droite triangle de tm-title1
-
-    .border-triangle-right {
-        width: 1px;
-        height: 470px;
-        background: #BA4D54;
-        transform: rotate(-58deg);
-        position: absolute;
-        z-index: 1;
-        right: 357px;
-        top: 1115px;
-    }
-
-    // Bordure top de tm-title
-
-    .border-tm-title1 {
-        width: 1px;
-        height: 405px;
-        background: #BA4D54;
-        transform: rotate(90deg);
-        position: absolute;
-        z-index: 1;
-        left: 758px;
-        top: 1023px;
-    }
-
-    // Bordure bottom left de tm-title1 
-
-    .border-bottom-left-tm-title1 {
-        width: 1px;
-        height: 159px;
-        background: #BA4D54;
-        transform: rotate(90deg);
-        position: absolute;
-        z-index: 1;
-        left: 78px;
-        top: 2026px;
-    }
-
-
-    // Bordure bottom right de tm-title1 
-
-    .border-bottom-right-tm-title1 {
-        width: 1px;
-        height: 159px;
-        background: #BA4D54;
-        transform: rotate(90deg);
-        position: absolute;
-        z-index: 1;
-        right: 78px;
-        top: 2026px;
     }
 
     #tm-title1 {
@@ -611,6 +553,27 @@ body {
         width: 1202px;
         position: relative;
 
+        .tm-internet {
+            background-image: url("../../public/img/logo-portfolio/website.png");
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: -8%;
+            top: 80px;
+            transform: rotate(20deg);
+        }
+
+        .tm-windows {
+            background-image: url("../../public/img/logo-portfolio/windows10.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: -7%;
+            top: 80px;
+            transform: rotate(30deg);
+        }
 
         .triangle-left {
             width: 0px;
@@ -653,6 +616,45 @@ body {
             // transform: translate(0% 0%);
         }
 
+        // Bordure gauche triangle de tm-title
+
+        .border-triangle-left {
+            width: 1px;
+            height: 471px;
+            background: #BA4D54;
+            transform: rotate(58deg);
+            position: absolute;
+            z-index: 1;
+            left: 198px;
+            top: -111px;
+        }
+
+        // Bordure droite triangle de tm-title1
+
+        .border-triangle-right {
+            width: 1px;
+            height: 470px;
+            background: #BA4D54;
+            transform: rotate(-58deg);
+            position: absolute;
+            z-index: 1;
+            right: 198px;
+            top: -110px;
+        }
+
+        // Bordure top de tm-title
+
+        .border-tm-title1 {
+            width: 1px;
+            height: 406px;
+            background: #BA4D54;
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: 1;
+            left: 601px;
+            top: -203px;
+        }
+
         .tm-line1 {
             width: 330px;
             height: 170px;
@@ -677,13 +679,39 @@ body {
             transform: rotate(90deg);
             transform: scaleX(-1);
         }
+
+        // Bordure bottom left de tm-title1 
+
+        .border-bottom-left-tm-title1 {
+            width: 1px;
+            height: 148px;
+            background: #BA4D54;
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: 1;
+            left: -74px;
+            top: 806px;
+        }
+
+
+        // Bordure bottom right de tm-title1 
+
+        .border-bottom-right-tm-title1 {
+            width: 1px;
+            height: 148px;
+            background: #BA4D54;
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: 1;
+            right: -74px;
+            top: 806px;
+        }
     }
 
     .tm-projets {
 
         display: flex;
         margin: auto;
-        // justify-content: center;
         width: 1202px;
         height: 630px;
         position: relative;
@@ -710,6 +738,16 @@ body {
                 text-decoration: none;
                 color: white;
             }
+
+            .tm-maquettagePage:hover {
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .tm-btn-maquettage:hover {
+                border-radius: 20px;
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
         }
 
         .tm-bc {
@@ -725,6 +763,21 @@ body {
                 background-size: cover;
                 display: inline-block;
                 border: solid #BA4D54 1px;
+            }
+
+            .tm-bc-page {
+                text-decoration: none;
+                color: white;
+            }
+
+            .tm-bc-page:hover {
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .tm-btn-bc:hover {
+                border-radius: 20px;
+                transform: scale(1.1);
+                transition: 0.3s;
             }
         }
 
@@ -746,6 +799,16 @@ body {
             .tm-projetsPersoPage {
                 text-decoration: none;
                 color: white;
+            }
+
+            .tm-projetsPersoPage:hover {
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .tm-btn-projetsPerso:hover {
+                border-radius: 20px;
+                transform: scale(1.1);
+                transition: 0.3s;
             }
         }
 
@@ -1349,6 +1412,11 @@ body {
                 color: #BA4D54;
                 padding-bottom: 5%;
             }
+
+            a.tm-mailto:hover {
+                transform: scale(1.2);
+                transition: 0.3s;
+            }
         }
     }
 
@@ -1461,6 +1529,11 @@ body {
             justify-content: center;
         }
 
+        .tm-form8-submit:hover {
+            transform: scale(1.2);
+            transition: 0.3s;
+        }
+
         input[type=submit] {
             background-color: #BA4D54;
             color: white;
@@ -1539,25 +1612,22 @@ body {
     text-align: center;
     height: 250px;
     font-size: 1rem;
+    position:relative;
 
     .tm-logo {
 
         width: 33%;
 
-        // A enlever quand j'aurais mon logo
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        // décommenter quand j'aurais mon logo
-        .tm-logo1 {
-            // background-image: url(".");
-            // background-size: cover;
-            // width: 30px;
-            // height: 30px;
+        // Logo CV
+        .tm-logo2 {
+            background-image: url("../../public/img/logo-navbar/Logo\ TMD\ finit.svg");
+            background-size: cover;
+            background-position: center;
             display: inline-block;
-            margin-top: 25%;
+            width: 200px;
+            height: 150px;
+            position: absolute;
+            transform: translate(-80px, 50px);
         }        
     }
 
@@ -1584,6 +1654,11 @@ body {
                 margin-right: 30px;
             }
 
+            .tm-email:hover {
+                box-shadow: 5px 5px 10px rgb(186, 77, 84);
+                text-shadow: 1px 1px 1px black;
+            }
+
             .tm-numTel {
 
                 border: 1px solid #BA4D54;
@@ -1593,6 +1668,11 @@ body {
                 color: white;
                 background-color: #BA4D54;
             }
+
+            .tm-numTel:hover {
+                box-shadow: 5px 5px 10px rgb(186, 77, 84);
+                text-shadow: 1px 1px 1px black;
+            }  
         }
 
         .tm-reglesSecu {
@@ -1620,6 +1700,11 @@ body {
             margin-right: 20px;
         }
 
+        a.tm-fb1:hover {
+            transform: scale(1.3);
+            transition: 0.3s;
+        }
+
         .tm-insta1 {
 
             background-image: url("../../public/img/logo-footer/logo-insta.png");
@@ -1628,6 +1713,11 @@ body {
             width: 50px;
             height: 50px;
             margin-right: 20px;
+        }
+
+        a.tm-insta1:hover {
+            transform: scale(1.3);
+            transition: 0.3s;
         }
 
         .tm-git1 {
@@ -1640,6 +1730,11 @@ body {
             margin-right: 20px;
         }
 
+        a.tm-git1:hover {
+            transform: scale(1.3);
+            transition: 0.3s;
+        }
+
         .tm-linkedin1 {
 
             background-image: url("../../public/img/logo-footer/logo-linkedin.png");
@@ -1648,6 +1743,11 @@ body {
             width: 50px;
             height: 50px;
             margin-right: 20px;
+        }
+
+        a.tm-linkedin1:hover {
+            transform: scale(1.3);
+            transition: 0.3s;
         }
     }
 }
