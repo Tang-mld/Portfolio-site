@@ -443,6 +443,7 @@ body {
 
     .tm-text {
         text-align: center;
+        font-size: 1.3rem;
 
         a {
             text-decoration: none;
@@ -476,7 +477,7 @@ body {
             width: 40px;
             height: 40px;
             position: absolute;
-            left: 20%;
+            left: 19%;
             top: -110px;
         }
 
@@ -507,7 +508,7 @@ body {
             width: 42px;
             height: 40px;
             position: absolute;
-            right: 22%;
+            right: 15%;
             top: -240px;
             transform: rotate(-15deg);
         }
@@ -539,7 +540,7 @@ body {
             width: 40px;
             height: 40px;
             position: absolute;
-            right: 16%;
+            right: 22%;
             top: 40px;
         }
     }
@@ -895,182 +896,206 @@ body {
 
             width: 50%;
             border-right: solid #BA4D54 1px;
-            
 
-        // Images des logiciels de 1 à 4
+            // Images des logiciels de 1 à 4
 
-        // faire une div qui englobe l'image et la progressbnar en flex avec un align center
-        // Faire une min-height et min-widht sur l'image
-        // Faire pareil pour toutes les images
+            .tm-container-progress1 {
 
-        .tm-container-progress1 {
-
-            display: flex;
-            justify-content: center;
-            
-
-            // Image HTML
-
-            .tm-img1 {
-                background-image: url("../../public/img/logo-portfolio/html.png");
-                background-size: cover;
-                display: inline-block;
-                background-position: center;
-                min-height: 16px; 
-                min-width: 16px;
-                max-width: 64px;
-                max-height: 64px;
-                width: 64px;
-                height: 64px;
-                margin: auto;
-            }
-
-            // ProgressBar 1
-
-            .tm-progress1 {
-                height: 30px;
-                width: 45%;
-                background-color: lightgray;
-                border-radius: 20px;
-                margin-bottom: 11%;
-                margin-left: 5%;
-                margin-right: 20%;
-                margin-top: 12%;
-            }
-            
-            .tm-progress-done1 {
-                height: 100%;
-                width: 0%;
-                opacity: 0%;
-                background: linear-gradient(to left, #f2709c,#ff9472);
-                color: #fff;
-                border-radius: 20px;
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-                transition: 1s ease;
-            }
-
-
-
-        }
-
-            .tm-img2 {
-                background-image: url("../../public/img/logo-portfolio/css.png");
-                background-size: cover;
-                display: inline-block;
-                background-position: center;
-                height: 10%;
-                width: 5.2%;
-                position: absolute;
-                left: 7%;
-                top: 37%;
-            }
-
-            .tm-img3 {
-                background-image: url("../../public/img/logo-portfolio/php.png");
-                background-size: cover;
-                display: inline-block;
-                background-position: center;
-                height: 7.5%;
-                width: 6.5%;
-                position: absolute;
-                left: 6.2%;
-                top: 54%;
-            }
-
-            .tm-img4 {
-                background-image: url("../../public/img/logo-portfolio/angular.png");
-                background-size: cover;
-                display: inline-block;
-                background-position: center;
-                height: 9%;
-                width: 4.5%;
-                position: absolute;
-                left: 7.2%;
-                top: 69%;
-            }
-
-
-        
-
-        // ProgressBar 2
-        
-            .tm-progress2 {
-                height: 30px;
-                width: 45%;
-                background-color: lightgray;
-                border-radius: 20px;
-                margin-bottom: 10%;
-                margin-left: 35%;
-            }
-            
-            .tm-progress-done2 {
-                height: 100%;
-                width: 0%;
-                opacity: 0%;
-                background: linear-gradient(to left, #f2709c,#ff9472);
-                color: #fff;
-                border-radius: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-                transition: 1s ease;
-            }
-
-
-        // ProgressBar 3
                 
-            .tm-progress3 {
-                height: 30px;
-                width: 45%;
-                background-color: lightgray;
-                border-radius: 20px;
-                margin-bottom: 11%;
-                margin-left: 35%;
+
+                // Image HTML
+
+                .tm-img1 {
+                    background-image: url("../../public/img/logo-portfolio/html.png");
+                    background-size: cover;
+                    display: inline-block;
+                    background-position: center;
+                    min-height: 16px; 
+                    min-width: 16px;
+                    max-width: 64px;
+                    max-height: 64px;
+                    width: 64px;
+                    height: 64px;
+                    margin: auto;
+                }
+
+                // ProgressBar 1
+
+                .tm-progress1 {
+                    height: 30px;
+                    width: 45%;
+                    background-color: lightgray;
+                    border-radius: 20px;
+                    margin-bottom: 5%;
+                    margin-left: 5%;
+                    margin-right: 20%;
+                    margin-top: 5%;
+                }
+                
+                .tm-progress-done1 {
+                    height: 100%;
+                    width: 0%;
+                    opacity: 0%;
+                    background: linear-gradient(to left, #f2709c,#ff9472);
+                    color: #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                    transition: 1s ease;
+                }
             }
 
-            .tm-progress-done3 {
-                height: 100%;
-                width: 0%;
-                opacity: 0%;
-                background: linear-gradient(to left, #f2709c,#ff9472);
-                color: #fff;
-                border-radius: 20px;
+            .tm-container-progress2 {
+
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-                transition: 1s ease;
-            }
 
+                // Image CSS
 
-        // ProgressBar 4
-        
-            .tm-progress4 {
-                height: 30px;
-                width: 45%;
-                background-color: lightgray;
-                border-radius: 20px;
-                margin-bottom: 11%;
-                margin-left: 35%;;
-            }
+                .tm-img2 {
+                    background-image: url("../../public/img/logo-portfolio/css.png");
+                    background-size: 100%;
+                    display: inline-block;
+                    background-position: center;
+                    min-height: 16px; 
+                    min-width: 16px;
+                    max-width: 72px;
+                    max-height: 64px;
+                    width: 72px;
+                    height: 64px;
+                    margin: auto;
+                }
+
+                // ProgressBar 2
             
-            .tm-progress-done4 {
-                height: 100%;
-                width: 0%;
-                opacity: 0%;
-                background: linear-gradient(to left, #f2709c,#ff9472);
-                color: #fff;
-                border-radius: 20px;
+                .tm-progress2 {
+                    height: 30px;
+                    width: 45%;
+                    background-color: lightgray;
+                    border-radius: 20px;
+                    margin-bottom: 5%;
+                    margin-left: 5%;
+                    margin-right: 20%;
+                    margin-top: 5%;
+                }
+                
+                .tm-progress-done2 {
+                    height: 100%;
+                    width: 0%;
+                    opacity: 0%;
+                    background: linear-gradient(to left, #f2709c,#ff9472);
+                    color: #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                    transition: 1s ease;
+                }
+            }    
+
+            .tm-container-progress3 {
+
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-                transition: 1s ease;
-            }
+
+                // Image PHP
+
+                .tm-img3 {
+                    background-image: url("../../public/img/logo-portfolio/php.png");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    display: inline-block;
+                    background-position: center;
+                    min-height: 16px; 
+                    min-width: 16px;
+                    max-width: 82px;
+                    max-height: 64px;
+                    width: 82px;
+                    height: 64px;
+                    margin: auto;
+                }
+
+                // ProgressBar 3
+                                
+                .tm-progress3 {
+                    height: 30px;
+                    width: 45%;
+                    background-color: lightgray;
+                    border-radius: 20px;
+                    margin-bottom: 5%;
+                    margin-left: 5%;
+                    margin-right: 20%;
+                    margin-top: 5%;
+                }
+
+                .tm-progress-done3 {
+                    height: 100%;
+                    width: 0%;
+                    opacity: 0%;
+                    background: linear-gradient(to left, #f2709c,#ff9472);
+                    color: #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                    transition: 1s ease;
+                }
+            }    
+
+            .tm-container-progress4 {
+
+                display: flex;
+                justify-content: center;
+
+                // Image Angular
+
+                .tm-img4 {
+                    background-image: url("../../public/img/logo-portfolio/angular.png");
+                    background-size: cover;
+                    display: inline-block;
+                    background-position: center;
+                    min-height: 16px; 
+                    min-width: 16px;
+                    max-width: 64px;
+                    max-height: 64px;
+                    width: 64px;
+                    height: 64px;
+                    margin: auto;
+                }
+
+                // ProgressBar 4
+            
+                .tm-progress4 {
+                    height: 30px;
+                    width: 45%;
+                    background-color: lightgray;
+                    border-radius: 20px;
+                    margin-bottom: 5%;
+                    margin-left: 5%;
+                    margin-right: 20%;
+                    margin-top: 5%;
+                }
+                
+                .tm-progress-done4 {
+                    height: 100%;
+                    width: 0%;
+                    opacity: 0%;
+                    background: linear-gradient(to left, #f2709c,#ff9472);
+                    color: #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                    transition: 1s ease;
+                }
+            }    
         }
 
 
@@ -1078,159 +1103,210 @@ body {
 
             width: 50%;
 
-        // Images des logiciels de 5 à 8
+            // Images des logiciels de 5 à 8
 
-            .tm-img5 {
-                background-image: url("../../public/img/logo-portfolio/javascript.png");
-                background-size: cover;
-                display: inline-block;
-                background-position: center;
-                height: 9%;
-                width: 5%;
-                position: absolute;
-                right: 38.5%;
-                top: 21%;
-            }
+            .tm-container-progress5 {
 
-            .tm-img6 {
-                background-image: url("../../public/img/logo-portfolio/wordpress.png");
-                background-size: cover;
-                display: inline-block;
-                background-position: center;
-                height: 8.5%;
-                width: 4%;
-                position: absolute;
-                right: 39%;
-                top: 37.5%;
-            }
-
-            .tm-img7 {
-                background-image: url("../../public/img/logo-portfolio/Symfony.png");
-                background-size: cover;
-                display: inline-block;
-                background-position: center;
-                height: 8.5%;
-                width: 4%;
-                position: absolute;
-                right: 39%;
-                top: 54%;
-            }
-
-            .tm-img8 {
-                background-image: url("../../public/img/logo-portfolio/bdd.png");
-                background-size: cover;
-                display: inline-block;
-                background-position: center;
-                height: 8.5%;
-                width: 4%;
-                position: absolute;
-                right: 39%;
-                top: 70%;
-            }
-
-
-        // ProgressBar 5
-        
-            .tm-progress5 {
-                height: 30px;
-                width: 45%;
-                background-color: lightgray;
-                border-radius: 20px;
-                margin-bottom: 11%;
-                margin-left: 35%;
-                margin-top: 10%;
-            }
-            
-            .tm-progress-done5 {
-                height: 100%;
-                width: 0%;
-                opacity: 0%;
-                background: linear-gradient(to left, #f2709c,#ff9472);
-                color: #fff;
-                border-radius: 20px;
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-                transition: 1s ease;
-            }
 
+                // Image JS
 
-        // ProgressBar 6
-        
-            .tm-progress6 {
-                height: 30px;
-                width: 45%;
-                background-color: lightgray;
-                border-radius: 20px;
-                margin-bottom: 11%;
-                margin-left: 35%;;
-            }
+                .tm-img5 {
+                    background-image: url("../../public/img/logo-portfolio/javascript.png");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    display: inline-block;
+                    background-position: center;
+                    min-height: 16px; 
+                    min-width: 16px;
+                    max-width: 100px;
+                    max-height: 64px;
+                    width: 100px;
+                    height: 64px;
+                    margin: auto;
+                    margin-top: 15px;
+                }
             
-            .tm-progress-done6 {
-                height: 100%;
-                width: 0%;
-                opacity: 0%;
-                background: linear-gradient(to left, #f2709c,#ff9472);
-                color: #fff;
-                border-radius: 20px;
+                // ProgressBar 5
+        
+                .tm-progress5 {
+                    height: 30px;
+                    width: 45%;
+                    background-color: lightgray;
+                    border-radius: 20px;
+                    margin-bottom: 5%;
+                    margin-left: 4%;
+                    margin-right: 18%;
+                    margin-top: 4%;
+                }
+                
+                .tm-progress-done5 {
+                    height: 100%;
+                    width: 0%;
+                    opacity: 0%;
+                    background: linear-gradient(to left, #f2709c,#ff9472);
+                    color: #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                    transition: 1s ease;
+                }
+            }
+
+            .tm-container-progress6 {
+
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-                transition: 1s ease;
-            }
 
+                // Image Wordpress
 
-        // ProgressBar 7
-        
-            .tm-progress7 {
-                height: 30px;
-                width: 45%;
-                background-color: lightgray;
-                border-radius: 20px;
-                margin-bottom: 11%;
-                margin-left: 35%;
-            }
+                .tm-img6 {
+                    background-image: url("../../public/img/logo-portfolio/wordpress.png");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    display: inline-block;
+                    background-position: center;
+                    min-height: 16px; 
+                    min-width: 16px;
+                    max-width: 60px;
+                    max-height: 64px;
+                    width: 60px;
+                    height: 64px;
+                    margin: auto;
+                    margin-top: 30px;
+                }
+
+                // ProgressBar 6
             
-            .tm-progress-done7 {
-                height: 100%;
-                width: 0%;
-                opacity: 0%;
-                background: linear-gradient(to left, #f2709c,#ff9472);
-                color: #fff;
-                border-radius: 20px;
+                .tm-progress6 {
+                    height: 30px;
+                    width: 45%;
+                    background-color: lightgray;
+                    border-radius: 20px;
+                    margin-bottom: 5%;
+                    margin-left: 4%;
+                    margin-right: 18%;
+                    margin-top: 6%;
+                }
+                
+                .tm-progress-done6 {
+                    height: 100%;
+                    width: 0%;
+                    opacity: 0%;
+                    background: linear-gradient(to left, #f2709c,#ff9472);
+                    color: #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                    transition: 1s ease;
+                }
+            }    
+
+            .tm-container-progress7 {
+
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-                transition: 1s ease;
-            }
 
+                // Image Symfony
 
-        // ProgressBar 8
+                .tm-img7 {
+                    background-image: url("../../public/img/logo-portfolio/Symfony.png");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    display: inline-block;
+                    background-position: center;
+                    min-height: 16px; 
+                    min-width: 16px;
+                    max-width: 64px;
+                    max-height: 64px;
+                    width: 64px;
+                    height: 64px;
+                    margin: auto;
+                    margin-top: 30px;
+                }
+
+                // ProgressBar 7
         
-            .tm-progress8 {
-                height: 30px;
-                width: 45%;
-                background-color: lightgray;
-                border-radius: 20px;
-                margin-bottom: 11%;
-                margin-left: 35%;
+                .tm-progress7 {
+                    height: 30px;
+                    width: 45%;
+                    background-color: lightgray;
+                    border-radius: 20px;
+                    margin-bottom: 5%;
+                    margin-left: 4%;
+                    margin-right: 18%;
+                    margin-top: 6%;
+                }
+                
+                .tm-progress-done7 {
+                    height: 100%;
+                    width: 0%;
+                    opacity: 0%;
+                    background: linear-gradient(to left, #f2709c,#ff9472);
+                    color: #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                    transition: 1s ease;
+                }
             }
-            
-            .tm-progress-done8 {
-                height: 100%;
-                width: 0%;
-                opacity: 0%;
-                background: linear-gradient(to left, #f2709c,#ff9472);
-                color: #fff;
-                border-radius: 20px;
+
+            .tm-container-progress8 {
+
                 display: flex;
                 justify-content: center;
-                align-items: center;
-                box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
-                transition: 1s ease;
+
+                // Image BDD
+
+                .tm-img8 {
+                    background-image: url("../../public/img/logo-portfolio/bdd.png");
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    display: inline-block;
+                    background-position: center;
+                    min-height: 16px; 
+                    min-width: 16px;
+                    max-width: 64px;
+                    max-height: 64px;
+                    width: 64px;
+                    height: 64px;
+                    margin: auto;
+                    margin-top: 15px;
+                }
+
+                // ProgressBar 8
+            
+                .tm-progress8 {
+                    height: 30px;
+                    width: 45%;
+                    background-color: lightgray;
+                    border-radius: 20px;
+                    margin-bottom: 5%;
+                    margin-left: 4%;
+                    margin-right: 18%;
+                    margin-top: 4%;
+                }
+                
+                .tm-progress-done8 {
+                    height: 100%;
+                    width: 0%;
+                    opacity: 0%;
+                    background: linear-gradient(to left, #f2709c,#ff9472);
+                    color: #fff;
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0 3px 3px -5px #f2709c, 0 2px 5px #f2709c;
+                    transition: 1s ease;
+                }
             }
         }
     }
@@ -1509,7 +1585,7 @@ body {
         .tm-form7 {
             display: flex;
             width: 80%;
-            height: 150px;
+            height: 250px;
             margin: auto;
             padding-top: 60px;
             justify-content: center;
@@ -1525,7 +1601,7 @@ body {
             display: flex;
             width: 30%;
             margin: auto;
-            padding-top: 80px;
+            padding-top: 60px;
             justify-content: center;
         }
 
