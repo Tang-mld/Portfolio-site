@@ -93,7 +93,7 @@ document.querySelector('.tm-form').addEventListener('submit', function (e) {
     // console.log(validation);
     // console.log(conditions);
     if (validation) {
-        alert('Merci pour votre interet. Votre demande sera traitée dans les plus brefs délais.');
+        alert('Le formulaire n\'est pas actif ! Veuillez m\'envoyer un mail via l\'adresse email ci-dessus ou via le boutton du footer, merci !');
     } else {
         // Sinon j'affiche que les champs ne sont pas correctement remplis
         e.preventDefault();

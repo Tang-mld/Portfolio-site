@@ -1,0 +1,79 @@
+/* ####################
+       TOGGLE NAV
+#####################*/ 
+
+.tm-toggle {
+    margin-top: 7px;
+}
+
+#tm-toggleNav {
+
+    display: none;
+    
+    .tm-toggleNav-container {
+        position: fixed;
+        right: 0px;
+        top: 7.4%;
+        z-index: 1;
+        opacity: 80%;
+
+        display: flex;
+        width: 15%;
+        margin: auto;
+        flex-direction: column;
+        text-align: center;
+        font-weight: bold;
+        background-color: #65ACBC;
+        color: white;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .tm-toggleNav1 {
+            border: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav2 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav3 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav4 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav5 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav6 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+
+        .tm-toggleNav7 {
+            border-right: 1px solid #BA4D54;
+            border-left: 1px solid #BA4D54;
+            border-bottom: 1px solid #BA4D54;
+        }
+    }
+}
+
+
+/* ####################
+    FIN TOOGLE NAV
+#####################*/ 

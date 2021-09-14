@@ -1,0 +1,126 @@
+/* ####################
+      ACTIVITES
+#####################*/
+
+#tm-activites {
+
+    background-color: #65ACBC;
+    color: white;
+    height: 650px;
+
+
+    h2 {
+        text-align: center;
+        padding-top: 7%;
+        margin-bottom: 5%;
+    }
+
+    .tm-act {
+
+        display: flex;
+
+        h3 {
+            margin-top: 15%;
+        }
+        .tm-cat1 {
+
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+
+            .tm-integration {
+                background-image: url("../../public/img/images-portfolio/integration-web.jpg");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 220px;
+                width: 220px;
+                border: solid #BA4D54 1px;;
+                border-radius: 100%;
+            }
+
+            .tm-integration:hover {
+                filter: brightness(50%);
+                -webkit-filter: brightness(50%);
+            }
+        }
+
+        .tm-cat2 {
+
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+
+            .tm-conception {
+                background-image: url("../../public/img/images-portfolio/conception-graphique.jpg");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 220px;
+                width: 220px;
+                border: solid #BA4D54 1px;;
+                border-radius: 100%;
+            }
+
+            .tm-conception:hover {
+                filter: brightness(50%);
+                -webkit-filter: brightness(50%);
+            }
+        }
+
+        .tm-cat3 {
+
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+
+            .tm-referencement {
+                background-image: url("../../public/img/images-portfolio/referencement-web.jpg");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 220px;
+                width: 220px;
+                border: solid #BA4D54 1px;;
+                border-radius: 100%;
+            }
+
+            .tm-referencement:hover {
+                filter: brightness(50%);
+                -webkit-filter: brightness(50%);
+            }
+        }
+
+        .tm-cat4 {
+
+            display: flex;
+            width: 25%;
+            flex-direction: column;
+            align-items: center;
+
+            .tm-projetsWeb {
+                background-image: url("../../public/img/images-portfolio/projet-web.jpg");
+                background-size: cover;
+                display: inline-block;
+                background-position: center;
+                height: 220px;
+                width: 220px;
+                border: solid #BA4D54 1px;;
+                border-radius: 100%;
+            }
+
+            .tm-projetsWeb:hover {
+                filter: brightness(50%);
+                -webkit-filter: brightness(50%);
+            }
+        }
+    }
+}
+
+
+/* ####################
+    FIN ACTIVITES
+#####################*/

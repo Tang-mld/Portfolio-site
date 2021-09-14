@@ -1,0 +1,414 @@
+/* ####################
+     PRESENTATION
+#####################*/ 
+
+#tm-presentation {
+
+    background-color: #65ACBC;
+    color: white;
+
+    h2 {
+        text-align: center;
+        margin: 0;
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    .tm-text {
+        text-align: center;
+        font-size: 1.3rem;
+
+        a {
+            text-decoration: none;
+            color: #BA4D54;
+            font-weight: bold;
+        }
+    }
+
+    .tm-logiciels {
+
+        display: flex;
+        height: 100px;
+        position: relative;
+
+        // Mettre le parent en relatif pour positionner 
+
+        .tm-macOS {
+            background-image: url("../../public/img/logo-portfolio/mac.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5%;
+            top: -240px;
+            transform: rotate(-15deg);
+        }
+
+        .tm-insta {
+            background-image: url("../../public/img/logo-portfolio/insta.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 19%;
+            top: -110px;
+        }
+
+        a.tm-insta:hover {
+            transform: scale(1.5);
+            transition: 0.3s;
+        }
+
+        .tm-facebook {
+            background-image: url("../../public/img/logo-portfolio/facebook.png");
+            background-size: cover;
+            width:50px;
+            height: 40px;
+            position: absolute;
+            left: 11%;
+            top: 40px;
+            transform: rotate(-25deg);
+        }
+
+        a.tm-facebook:hover {
+            transform: scale(1.5);
+            transition: 0.3s;
+        }
+
+        .tm-linkedin {
+            background-image: url("../../public/img/logo-portfolio/linkedin.png");
+            background-size: cover;
+            width: 42px;
+            height: 40px;
+            position: absolute;
+            right: 15%;
+            top: -240px;
+            transform: rotate(-15deg);
+        }
+
+        a.tm-linkedin:hover {
+            transform: scale(1.5);
+            transition: 0.3s;
+        }
+
+        .tm-github {
+            background-image: url("../../public/img/logo-portfolio/github.png");
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 5%;
+            top: -110px;
+            transform: rotate(25deg);
+        }
+
+        a.tm-github:hover {
+            transform: scale(1.5);
+            transition: 0.3s;
+        }
+
+        .tm-affinity {
+            background-image: url("../../public/img/logo-portfolio/affinity.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 22%;
+            top: 40px;
+        }
+    }
+
+    #tm-title1 {
+        
+        background-color: white;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        width: 1202px;
+        position: relative;
+
+        .tm-internet {
+            background-image: url("../../public/img/logo-portfolio/website.png");
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: -8%;
+            top: 80px;
+            transform: rotate(20deg);
+        }
+
+        .tm-windows {
+            background-image: url("../../public/img/logo-portfolio/windows10.png");
+            background-size: cover;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: -7%;
+            top: 80px;
+            transform: rotate(30deg);
+        }
+
+        .triangle-left {
+            width: 0px;
+            height: 0px;
+            border: 0 solid transparent;
+            border-top-width: 0px;
+            border-bottom-width: 250px;
+            border-left: 400px solid #65ACBC;
+            // transform: translate(0% 0%);
+        } 
+
+        .tm-ovale {
+            border-top: solid #BA4D54 1px;
+            width: 220px;
+            height: 100px;
+            background: #BA4D54;
+            border-top-left-radius: 200px 100px;
+            border-top-right-radius: 200px 100px;
+            border-bottom-right-radius: 200px 100px;
+            border-bottom-left-radius: 200px 100px;
+            margin-top: 120px;
+            margin-left: 91px;
+            margin-right: 91px;
+            // transform: translate(0% 0%);
+
+            h2 {
+                width: 150px;
+                padding: 35px;
+                margin: auto;
+            }
+        }
+
+        .triangle-right {
+            width: 0px;
+            height: 0px;
+            border: 0 solid transparent;
+            border-top-width: 0px;
+            border-bottom-width: 250px;
+            border-right: 400px solid #65ACBC;
+            // transform: translate(0% 0%);
+        }
+
+        // Bordure gauche triangle de tm-title
+
+        .border-triangle-left {
+            width: 1px;
+            height: 471px;
+            background: #BA4D54;
+            transform: rotate(58deg);
+            position: absolute;
+            z-index: 1;
+            left: 198px;
+            top: -111px;
+        }
+
+        // Bordure droite triangle de tm-title1
+
+        .border-triangle-right {
+            width: 1px;
+            height: 470px;
+            background: #BA4D54;
+            transform: rotate(-58deg);
+            position: absolute;
+            z-index: 1;
+            right: 198px;
+            top: -110px;
+        }
+
+        // Bordure top de tm-title
+
+        .border-tm-title1 {
+            width: 1px;
+            height: 406px;
+            background: #BA4D54;
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: 1;
+            left: 601px;
+            top: -203px;
+        }
+
+        .tm-line1 {
+            width: 330px;
+            height: 170px;
+            border: solid 1px black;
+            border-radius: 0 100px 95%/200px 0;
+            border-color: transparent transparent #BA4D54 transparent;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            transform: translate(-48%);
+        }
+
+        .tm-line2 {
+            width: 330px;
+            height: 170px;
+            border: solid 1px black;
+            border-radius: 0 100px 95%/200px 0;
+            border-color: transparent transparent #BA4D54 transparent;
+            position: absolute;
+            top: 0px;
+            left: 160px;
+            transform: rotate(90deg);
+            transform: scaleX(-1);
+        }
+
+        // Bordure bottom left de tm-title1 
+
+        .border-bottom-left-tm-title1 {
+            width: 1px;
+            height: 148px;
+            background: #BA4D54;
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: 1;
+            left: -74px;
+            top: 806px;
+        }
+
+
+        // Bordure bottom right de tm-title1 
+
+        .border-bottom-right-tm-title1 {
+            width: 1px;
+            height: 148px;
+            background: #BA4D54;
+            transform: rotate(90deg);
+            position: absolute;
+            z-index: 1;
+            right: -74px;
+            top: 806px;
+        }
+    }
+
+    .tm-projets {
+
+        display: flex;
+        margin: auto;
+        width: 1202px;
+        height: 630px;
+        position: relative;
+        background-color: white;
+        border-left: solid #BA4D54 1px;
+        border-right: solid #BA4D54 1px;
+
+        .tm-maquettage {
+            width: 390px;
+            height: 700px;
+            margin-top: 100px;
+            margin-right: 15px;
+
+            .tm-img1 {
+                background-image: url("../../public/img/images-portfolio/maquettage.jpg");
+                width: 390px;
+                height: 200px;
+                background-size: cover;
+                display: inline-block;
+                border: solid #BA4D54 1px;
+            }
+
+            .tm-maquettagePage {
+                text-decoration: none;
+                color: white;
+            }
+
+            .tm-maquettagePage:hover {
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .tm-btn-maquettage:hover {
+                border-radius: 20px;
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+        }
+
+        .tm-bc {
+            width: 390px;
+            height: 700px;
+            margin-top: 100px;
+            margin-right: 15px;
+
+            .tm-img2 {
+                background-image: url("../../public/img/images-portfolio/business-case.jpg");
+                width: 390px;
+                height: 200px;
+                background-size: cover;
+                display: inline-block;
+                border: solid #BA4D54 1px;
+            }
+
+            .tm-bc-page {
+                text-decoration: none;
+                color: white;
+            }
+
+            .tm-bc-page:hover {
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .tm-btn-bc:hover {
+                border-radius: 20px;
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+        }
+
+        .tm-projetsPerso {
+            width: 390px;
+            height: 700px;
+            margin-top: 100px;
+            margin-right: 18px;
+
+            .tm-img3 {
+                background-image: url("../../public/img/images-portfolio/projets-perso.jpg");
+                width: 390px;
+                height: 200px;
+                background-size: cover;
+                display: inline-block;
+                border: solid #BA4D54 1px;
+            }
+
+            .tm-projetsPersoPage {
+                text-decoration: none;
+                color: white;
+            }
+
+            .tm-projetsPersoPage:hover {
+                text-shadow: 1px 1px 1px black;
+            }
+
+            .tm-btn-projetsPerso:hover {
+                border-radius: 20px;
+                transform: scale(1.1);
+                transition: 0.3s;
+            }
+        }
+
+        button {
+            display: block;
+            background-color: #BA4D54;
+            color: white;
+            width: 220px;
+            height: 50px;
+            margin: auto;
+            margin-top: 150px;
+        } 
+
+        .tm-bytmoji {
+            background-image: url("../../public/img/bytmoji/bytmoji.png");
+                width: 150px;
+                height: 250px;
+                background-size: cover;
+                display: inline-block;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                transform: translate(-80%);
+        }
+    }
+}
+/* ####################
+    FIN PRESENTATION
+#####################*/ 

@@ -1,0 +1,26 @@
+/* ####################
+      IMGSCROLL
+#####################*/
+
+#tm-imgScroll {
+
+    height: 600px;
+    width: 100%;
+
+    .tm-imgS {
+
+        background-image: url('../../public/img/image-scroll/image-scroll.jpg');
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: inherit;
+        height: 500px;
+        width: 100%;
+        background-attachment: fixed;
+    }
+}
+
+
+/* ####################
+    FIN IMGSCROLL
+#####################*/

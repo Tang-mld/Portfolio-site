@@ -1,0 +1,228 @@
+/* ####################
+      FORMULAIRE
+#####################*/
+
+#tm-formulaire {
+
+    position: relative;
+
+    .tm-title1 {
+
+        display: flex;
+        flex-direction: column;
+        background-color: #65ACBC;
+
+        h2 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 5%;
+            width: 60%;
+            height: 100px;
+            margin: auto;
+            background-color: white;
+            border-radius: 20px 20px 0 0;
+        }
+    
+        h3 {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 100px;
+            margin: auto;
+            background-color: white; 
+
+            a {
+                text-decoration: none;
+                padding: 0;
+                color: #BA4D54;
+                padding-bottom: 5%;
+            }
+
+            a.tm-mailto:hover {
+                transform: scale(1.2);
+                transition: 0.3s;
+            }
+        }
+    }
+
+    .tm-avion {
+        background-image: url('../../public/img/images-portfolio/avion-jaune.png');
+        background-size: cover;
+        display: inline-block;
+        background-position: center;
+        height: 20%;
+        width: 17%;
+        position: absolute;
+        right: 13%;
+        top: 62%;
+    }
+
+    .tm-form {
+
+        background-image: url('../../public/img/images-portfolio/formulaire.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 720px;
+        position: relative;
+
+        .tm-form1 {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            flex-direction: row;
+            padding-top: 60px;
+            position: absolute;
+            left: 10%;
+        }
+
+        .tm-form2 {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            flex-direction: row;
+            padding-top: 60px;
+            position: absolute;
+            right: 10%;
+        }
+
+        .tm-form3 {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            padding-top: 60px;
+            position: absolute;
+            top: 80px;
+            left: 10%;
+        }
+
+        .tm-form4 {
+            display: flex;
+            width: 40%;
+            justify-content: center;
+            padding-top: 60px;
+            position: absolute;
+            right: 10%;
+            top: 80px;
+        }
+
+        .tm-form5 {
+            display: flex;
+            width: 40%;
+            margin: auto;
+            padding-top: 60px;
+            justify-content: center;
+            padding-top: 230px;
+        }
+
+        #url {
+            text-align: center;
+        }
+
+        .tm-form6 {
+            display: flex;
+            width: 40%;
+            margin: auto;
+            padding-top: 60px;
+            justify-content: center;
+            padding-top: 60px;
+        }
+
+        #objet {
+            text-align: center;
+        }
+
+        .tm-form7 {
+            display: flex;
+            width: 80%;
+            height: 250px;
+            margin: auto;
+            padding-top: 60px;
+            justify-content: center;
+
+            textarea {
+                width: 50%;
+                height: 100%;
+                text-align: center;
+            }
+        }
+
+        .tm-form8 {
+            display: flex;
+            width: 30%;
+            margin: auto;
+            padding-top: 60px;
+            justify-content: center;
+        }
+
+        .tm-form8-submit:hover {
+            transform: scale(1.2);
+            transition: 0.3s;
+        }
+
+        input[type=submit] {
+            background-color: #BA4D54;
+            color: white;
+        }
+
+        .form_col {
+            display: inline-block;
+            padding: 3px 0px;
+            min-height: 1px;
+            text-align: right;
+        }
+            
+        input {
+            width: 40%;
+            padding: 2px;
+            border: 1px solid #BA4D54;
+            border-radius: 2px;
+            outline: none; /* Retire les bordures appliquées par certains navigateurs (Chrome notamment) lors du focus des éléments <input> */
+        }
+            
+        input:focus {
+            border-color: rgba(82, 168, 236, 0.75);
+            box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+        }
+
+        textarea:focus {
+            border-color: rgba(82, 168, 236, 0.75);
+            box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+        }
+            
+        .correct {
+            border-color: rgba(68, 191, 68, 0.75);
+        }
+            
+        .correct:focus {
+            border-color: rgba(68, 191, 68, 0.75);
+            box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+        }
+            
+        .incorrect {
+            border-color: rgba(191, 68, 68, 0.75);
+        }
+            
+        .incorrect:focus {
+            border-color: rgba(191, 68, 68, 0.75);
+            box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+        }
+            
+        .tooltip {
+            display: inline-block;
+            margin-left: 20px;
+            padding: 2px 4px;
+            border: 1px solid #555;
+            background-color: #CCC;
+            border-radius: 4px;
+        }
+    }
+}
+
+
+/* ####################
+    FIN FORMULAIRE
+#####################*/

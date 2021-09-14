@@ -1,0 +1,328 @@
+/* ####################
+        ENTETE
+#####################*/ 
+
+// Navbar : 
+
+#tm-entete {
+
+    box-sizing: border-box;
+
+    .tm-navbar {
+    
+        display: flex;
+        justify-content: space-around;
+        background-color: #65ACBC;
+        color: white;
+        margin: auto;
+        font-weight: 800;
+
+        .tm-logo {
+            background-image: url("../../public/img/logo-navbar/Logo\ TMD\ finit.svg");
+            background-size: cover;
+            background-position: center;
+            width: 100px;
+            height: 80px;
+            position: absolute;
+            left: -20px;
+            top: 10px;
+            transform: translate(25px, -10%);
+            z-index: 2;
+        }
+
+        ul {
+            margin-bottom: 0;
+            height: 40px;
+            font-size: 1.1rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .tm-home {
+                background-image: url('../../public/img/logo-navbar/page-d\'accueil.png');
+                background-size: cover;
+                width: 1.2rem;
+                height: 1.2rem;
+                display: inline-block;
+                background-position: center;
+                vertical-align: sub;
+                margin-right: 8px;
+            }
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 40px;
+        }
+
+
+        .tm-toggle {
+            background-image: url("../../public/img/logo-navbar/burger-menu.png");
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            position: fixed;
+            right: 5%;
+            top: 5%;
+            z-index: 1;
+        }  
+    }
+
+
+
+// Caroussel :
+
+    // Text animé du caroussel
+    #tm-table {
+        text-align: center;
+        display: table;
+        color: #BA4D54;
+        width: 60%;
+        height: 30%;
+        position: absolute;
+        top: 42%;
+        left: 20%;
+        z-index: 1;
+    }
+        
+    #tm-centeralign {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .tm-title-anime {
+        text-transform: uppercase;
+        letter-spacing: 1pt;
+        font-size: 30pt;
+        margin-bottom: 15px;
+    }
+    // Fin du text animé
+
+
+    // Caroussel 
+    .tm-caroussel {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #65ACBC;
+    }
+
+    // Je masque le surplus de la 2ème image qui empiétais sur la 1ère lors du zoom
+    .tm-carousel-screen {
+        overflow: hidden;
+    }
+    
+    /*Pour marcher le caroussel ne doit pas être à 100% de largeur*/
+    .tm-carousel-container {
+
+        max-width: auto;
+        width: 85%;
+        position: relative;
+
+        .tm-left-arrow {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 147px;
+            cursor: pointer;
+        }
+        
+        .tm-left-arrow:hover {
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+        }
+        
+        .tm-left-arrow:hover .chevron,
+        .tm-right-arrow:hover .chevron {
+            border-color: #e6e6e6;
+        }
+        
+        .tm-right-arrow {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 147px;
+            cursor: pointer;
+        }
+        
+        .tm-right-arrow:hover {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+        }
+        
+        .tm-chevron {
+            width: 25px;
+            height: 25px;
+            border: solid rgba(255, 255, 255, 0.5);
+            border-width: 10px 10px 0 0;
+        }
+        
+        .tm-chevron.right {
+            transform: rotate(45deg);
+        }
+        
+        .tm-chevron.left {
+            transform: rotate(-135deg);
+        }
+    }
+    
+    /*C'est le vériatble caroussel qui est caché*/
+    .tm-carousel {
+        position: relative;
+        width: 100%;
+        /*La largeur de l'image est de 980px et sa hauteur est de 570px.*/
+        padding-top: calc(570 / 980 * 100%);
+        overflow: hidden;
+    }
+
+    // Effet zoom 1ère image
+    .tm-full1 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+    }
+
+    .tm-zoom1 {
+        animation: scale 40s linear infinite;
+    }
+
+    @keyframes scale {
+        50% {
+          -webkit-transform:scale(1.2);
+          -moz-transform:scale(1.2);
+          -ms-transform:scale(1.2);
+          -o-transform:scale(1.2);
+          transform:scale(1.2);
+        }
+    }
+    // Fin du zoom de la 1ère image
+
+
+    // Effet zoom 2ème image
+    .tm-full2 {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: block;
+    }
+
+    .tm-zoom2 {
+        animation: scale 40s linear infinite;
+    }
+
+    @keyframes scale {
+        50% {
+          -webkit-transform:scale(1.2);
+          -moz-transform:scale(1.2);
+          -ms-transform:scale(1.2);
+          -o-transform:scale(1.2);
+          transform:scale(1.2);
+        }
+    }
+    // Fin du zoom de la 2ème image
+
+
+    .tm-carousel-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .tm-circle-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 45px;
+    }
+    
+    .tm-circle {
+        border: 1px solid white;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    
+    .circle-fill {
+        background-color: white;
+    }
+    
+    .tm-carousel-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* Animations :*/
+    @keyframes toRight {
+        0% {
+        left: 0;
+        }
+        100% {
+        left: 100%;
+        }
+    }
+    
+    @keyframes toLeft {
+        0% {
+        left: 0;
+        }
+        100% {
+        left: -100%;
+        }
+    }
+    
+    @keyframes comeRight {
+        0% {
+        left: 100%;
+        }
+        100% {
+        left: 0;
+        }
+    }
+    
+    @keyframes comeLeft {
+        0% {
+        left: -100%;
+        }
+        100% {
+        left: 0;
+        }
+    }
+}
+
+/* ####################
+       FIN ENTETE
+#####################*/ 
