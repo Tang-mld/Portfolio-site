@@ -3,7 +3,7 @@
     BURGER MENU
 #####################*/
 
-let burgerMenu = document.querySelector('../#tm-toggleNav');
+let burgerMenu = document.querySelector('#tm-toggleNav');
 let toggleMenu = document.querySelector('.tm-toggle');
 
 function showToggle() { 
