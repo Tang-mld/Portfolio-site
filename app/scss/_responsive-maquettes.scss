@@ -1,0 +1,420 @@
+/* ####################
+      MEDIA 1440px
+#####################*/
+@media screen and (max-width: 1440px) {
+
+
+    #tm-entete {
+
+        .tm-navbar {
+
+            .tm-cercle-logo {
+                width: 80px;
+                height: 80px;
+                border-radius: 40px;
+                left: 15px;
+            }
+        }
+    }
+
+    #tm-footer {
+
+        height: 280px;
+
+        .tm-logo {
+
+            .tm-logo2 {
+                transform: translate(-80px, 70px);
+            }
+        }
+
+        .tm-contact {
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        .tm-reseauxSociaux {
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+
+/* ####################
+    FIN MEDIA 1440px
+#####################*/
+
+/* ####################
+      MEDIA 1024px
+#####################*/
+
+@media screen and (max-width: 1024px) {
+
+    #tm-entete {
+
+        .tm-navbar {
+
+            .tm-cercle-logo {
+                width: 70px;
+                left: 10px;
+            }
+        }
+    }
+
+    #tm-projets {
+    
+        h2 {
+            font-size: 1.4rem;
+            margin: 0 0 90px 0;
+            padding-top: 70px;
+        }
+    }
+
+    #tm-footer {
+
+        .tm-logo {
+
+            .tm-logo2 {
+                transform: translate(-80px, 90px);
+            }
+        }
+    }
+}
+
+/* ####################
+    FIN MEDIA 1024px
+#####################*/
+
+/* ####################
+      MEDIA 768px
+#####################*/
+
+@media screen and (max-width: 768px) {
+
+
+    #tm-entete {
+
+        .tm-navbar {
+
+            .tm-cercle-logo {
+                width: 50px;
+                height: 75px;
+                left: 8px;
+            }
+
+            .tm-logo {
+                transform: translate(27px, -10%);
+            }
+        }
+    }
+
+    #tm-toggleNav {
+        
+        .tm-toggleNav-container {
+            font-size: 0.8rem;
+            width: 25%;
+            top: 13.5%;
+        }
+    }
+
+    #tm-projets {
+
+        height: 600px;
+
+        .tm-container {
+            height: 300px;
+
+            .tm-card1 {
+
+                h3 {
+                    padding-top: 0.7rem;
+                }
+            }
+
+            .tm-card2 {
+
+                h3 {
+                    padding-top: 1.9rem;
+                }
+            }
+
+            .tm-card3 {
+
+                h3 {
+                    padding-top: 1.3rem;
+                }
+            }
+        }
+    }
+
+    #tm-footer {
+
+        height: 350px;
+
+        .tm-logo {
+
+            .tm-logo2 {
+                transform: translate(-80px, 120px);
+            }
+        }
+    }
+}
+
+/* ####################
+    FIN MEDIA 768px
+#####################*/
+
+/* ####################
+      MEDIA 425px
+#####################*/
+
+@media screen and (max-width: 426px) {
+
+
+    #tm-entete {
+
+        .tm-navbar {
+
+            .tm-cercle-logo {
+                width: 60px;
+                left: 17px;
+            }
+
+            .tm-logo {
+                transform: translate(40px, -10%);
+            }
+        }
+    }
+
+    #tm-toggleNav {
+        
+        .tm-toggleNav-container {
+            font-size: 1rem;
+            width: 50%;
+        }
+    }
+
+    #tm-projets {
+
+        height: 1800px;
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        .tm-container {
+            height: 300px;
+            
+
+            .tm-card1 {
+
+                width: 80%;
+                margin-right: 0px;
+                margin-bottom: 80px;
+
+                h3 {
+                    padding-top: 0.7rem;
+                    font-size: 1.2rem;
+                }
+            }
+
+            .tm-card2 {
+
+                width: 80%;
+                margin-right: 0px;
+                margin-bottom: 80px;
+
+                h3 {
+                    padding-top: 1.9rem;
+                    font-size: 1.2rem;
+                }
+            }
+
+            .tm-card3 {
+
+                width: 80%;
+
+                h3 {
+                    padding-top: 1.3rem;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    #tm-footer {
+
+        flex-direction: column;
+        align-items: center;
+        height: 650px;
+
+        .tm-logo {
+
+            .tm-logo2 {
+
+                position: static;
+                transform: translate(-8px, 0px);
+                margin-top: 30px;
+            }
+        }
+
+        .tm-contact {
+
+            width: 50%;
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .tm-contact1 {
+
+                .tm-email {
+                    margin-bottom: 20px;
+                }
+
+                .tm-numTel {
+                    padding: 0.3rem;
+                    margin: 10px;
+                }
+            }
+        }
+
+        .tm-reseauxSociaux {
+
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+
+            p {
+                display: none;
+            }
+
+            .tm-fb1 {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .tm-insta1 {
+                width: 50px;
+                height: 50px;
+            }
+
+            .tm-git1 {
+                width: 50px;
+                height: 50px;
+            }
+
+            .tm-linkedin1 {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}
+
+/* ####################
+    FIN MEDIA 425px
+#####################*/
+
+/* ####################
+      MEDIA 375px
+#####################*/
+
+@media screen and (max-width: 376px) {
+
+
+    #tm-projets {
+
+        height: 1700px;
+    }
+
+    #tm-footer {
+
+        height: 650px;
+
+        .tm-logo {
+
+            .tm-logo2 {
+                transform: translate(-14px, 0px);
+            }
+        }
+
+        .tm-reseauxSociaux {
+
+            margin-top: 30px;
+        }
+    }
+}
+
+/* ####################
+    FIN MEDIA 375px
+#####################*/
+
+/* ####################
+      MEDIA 320px
+#####################*/
+
+@media screen and (max-width: 321px) {
+
+    #tm-projets {
+
+        height: 1550px;
+
+        h2 {
+            margin-bottom: 70px
+        }
+    }
+
+    #tm-footer {
+
+        height: 570px;
+
+        .tm-logo {
+
+            .tm-logo2 {
+                transform: translate(-24px, 0px);
+            }
+        }
+
+        .tm-contact {
+
+            width: 220px;
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .tm-reseauxSociaux {
+
+            .tm-fb1 {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .tm-insta1 {
+                width: 40px;
+                height: 40px;
+            }
+
+            .tm-git1 {
+                width: 40px;
+                height: 40px;
+            }
+
+            .tm-linkedin1 {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+/* ####################
+    FIN MEDIA 320px
+#####################*/
