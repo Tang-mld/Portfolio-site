@@ -1361,6 +1361,7 @@
         .tm-toggleNav-container {
             font-size: 1rem;
             width: 20%;
+            top: 3%;
         }
     }
 }
@@ -1388,7 +1389,8 @@
             }
 
             .tm-toggle {
-                right: 4%;
+                right: 3%;
+                top: 3%;
             }  
 
             ul {
@@ -1754,7 +1756,7 @@
         .tm-toggleNav-container {
             font-size: 1rem;
             width: 25%;
-            top: 13.5%;
+            top: 3%;
         }
     }
 }
@@ -2351,7 +2353,7 @@
                 width: 20px;
                 height: 20px;
                 right: 6%;
-                top: 3%;
+                top: 2%;
             }
         }
 
@@ -2904,4 +2906,107 @@
 
 /* ####################
     FIN MEDIA 320px
+#####################*/
+
+/* ####################
+     MEDIA 280px
+#####################*/
+
+@media screen and (max-width: 280px) {
+
+    #tm-presentation {
+
+        .tm-logiciels {
+
+            .tm-macOS {
+                top: -350px;
+            }
+
+            .tm-insta {
+                top: -270px;
+            }
+
+            .tm-linkedin {
+                top: -345px;
+            }
+
+            .tm-github {
+                top: -265px;
+            }
+        }
+
+        #tm-title1 {
+
+            .tm-ovale {
+
+                .border-tm-title1 {
+                    height: 40px;
+                    top: -20px;
+                    left: 139px;
+                }
+            }
+        }
+    }
+
+    #tm-footer {
+
+        .tm-logo {
+
+            width: 40%;
+        }
+
+        .tm-reseauxSociaux {
+
+            .tm-fb1 {
+                width: 35px;
+                height: 35x;
+            }
+            
+            .tm-insta1 {
+                width: 35px;
+                height: 35px;
+            }
+
+            .tm-git1 {
+                width: 35px;
+                height: 35px;
+            }
+
+            .tm-linkedin1 {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+/* ####################
+    FIN MEDIA 280px
+#####################*/
+
+/* ####################
+     MEDIA 360px
+#####################*/
+
+@media screen and (max-width: 360px) {
+
+    
+    #tm-presentation {
+    
+        #tm-title1 {
+
+            .tm-ovale {
+
+                .border-tm-title1 {
+                    height: 118px;
+                    top: -59px;
+                    left: 180px;
+                }
+            }
+        }
+    }
+}
+
+/* ####################
+    FIN MEDIA 360px
 #####################*/

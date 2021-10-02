@@ -2553,6 +2553,7 @@ body {
   #tm-toggleNav .tm-toggleNav-container {
     font-size: 1rem;
     width: 20%;
+    top: 3%;
   }
 }
 /* ####################
@@ -2571,7 +2572,8 @@ body {
     left: -25px;
   }
   #tm-entete .tm-navbar .tm-toggle {
-    right: 4%;
+    right: 3%;
+    top: 3%;
   }
   #tm-entete .tm-navbar ul {
     padding-left: 15px;
@@ -2816,7 +2818,7 @@ body {
   #tm-toggleNav .tm-toggleNav-container {
     font-size: 1rem;
     width: 25%;
-    top: 13.5%;
+    top: 3%;
   }
 }
 /* ####################
@@ -3243,7 +3245,7 @@ body {
     width: 20px;
     height: 20px;
     right: 6%;
-    top: 3%;
+    top: 2%;
   }
   #tm-entete #tm-table .tm-title-anime {
     font-size: 8pt;
@@ -3582,6 +3584,64 @@ body {
 }
 /* ####################
     FIN MEDIA 320px
+#####################*/
+/* ####################
+     MEDIA 280px
+#####################*/
+@media screen and (max-width: 280px) {
+  #tm-presentation .tm-logiciels .tm-macOS {
+    top: -350px;
+  }
+  #tm-presentation .tm-logiciels .tm-insta {
+    top: -270px;
+  }
+  #tm-presentation .tm-logiciels .tm-linkedin {
+    top: -345px;
+  }
+  #tm-presentation .tm-logiciels .tm-github {
+    top: -265px;
+  }
+  #tm-presentation #tm-title1 .tm-ovale .border-tm-title1 {
+    height: 40px;
+    top: -20px;
+    left: 139px;
+  }
+
+  #tm-footer .tm-logo {
+    width: 40%;
+  }
+  #tm-footer .tm-reseauxSociaux .tm-fb1 {
+    width: 35px;
+    height: 35x;
+  }
+  #tm-footer .tm-reseauxSociaux .tm-insta1 {
+    width: 35px;
+    height: 35px;
+  }
+  #tm-footer .tm-reseauxSociaux .tm-git1 {
+    width: 35px;
+    height: 35px;
+  }
+  #tm-footer .tm-reseauxSociaux .tm-linkedin1 {
+    width: 35px;
+    height: 35px;
+  }
+}
+/* ####################
+    FIN MEDIA 280px
+#####################*/
+/* ####################
+     MEDIA 360px
+#####################*/
+@media screen and (max-width: 360px) {
+  #tm-presentation #tm-title1 .tm-ovale .border-tm-title1 {
+    height: 118px;
+    top: -59px;
+    left: 180px;
+  }
+}
+/* ####################
+    FIN MEDIA 360px
 #####################*/
 /* ####################
       MEDIA 1440px
